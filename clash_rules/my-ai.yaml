@@ -5,6 +5,7 @@ payload:
   - '+.oaiusercontent.com'
   - '+.anthropic.com'
   - '+.claude.ai'
+  - '+.claudeusercontent.com'
   - '+.google.com'
   - '+.deepmind.google'
   - '+.googleapis.com'
