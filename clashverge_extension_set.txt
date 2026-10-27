@@ -1,0 +1,123 @@
+# Profile Enhancement Merge Template for Clash Verge
+
+# 规则提供者
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  tldnotcn:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    path: ./ruleset/tldnotcn.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+  my-direct:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-direct.yaml"
+    path: ./ruleset/my-direct.yaml
+    interval: 86400
+  my-ai:
+    type: http
+    behavior: domain
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-ai.yaml"
+    path: ./ruleset/my-ai.yaml
+    interval: 86400
+
+# 分流规则
+rules:
+  - DOMAIN-SUFFIX,gitee.com,DIRECT
+  - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
+  - DOMAIN-SUFFIX,gh-proxy.org,DIRECT
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
+  - DOMAIN-SUFFIX,openai.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,sora.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,claude.ai,🤖 AI 专属
+  - DOMAIN-SUFFIX,claudeusercontent.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,x.ai,🤖 AI 专属
+  - DOMAIN-SUFFIX,grok.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,perplexity.ai,🤖 AI 专属
+  - DOMAIN-SUFFIX,aistudio.google.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,ai.google.dev,🤖 AI 专属
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,copilot.microsoft.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,githubcopilot.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,cursor.sh,🤖 AI 专属
+  - DOMAIN-SUFFIX,deepseek.com,DIRECT
+  - RULE-SET,my-direct,DIRECT
+  - RULE-SET,my-ai,🤖 AI 专属
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,Proxy
+  - RULE-SET,proxy,Proxy
+  - RULE-SET,gfw,Proxy
+  - RULE-SET,tldnotcn,Proxy
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
