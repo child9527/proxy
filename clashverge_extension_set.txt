@@ -71,22 +71,42 @@ rule-providers:
   my-direct:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-direct.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/proxy/main/clash_rules/my-direct.yaml"
     path: ./ruleset/my-direct.yaml
     interval: 86400
   my-ai:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-ai.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/proxy/main/clash_rules/my-ai.yaml"
     path: ./ruleset/my-ai.yaml
     interval: 86400
 
 # 分流规则
 rules:
+  # 0. 基础设施直连
   - DOMAIN-SUFFIX,gitee.com,DIRECT
   - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
   - DOMAIN-SUFFIX,gh-proxy.org,DIRECT
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+
+  # 0.5 微信 / 腾讯强制直连（放最前，避免被 tldnotcn/MATCH 吃掉）
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wechat.com,DIRECT
+  - DOMAIN-SUFFIX,wx.qq.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN-SUFFIX,qpic.cn,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tencent-cloud.com,DIRECT
+  - DOMAIN-SUFFIX,myqcloud.com,DIRECT
+  - DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+  - DOMAIN-KEYWORD,wechat,DIRECT
+  - DOMAIN-KEYWORD,weixin,DIRECT
+
+  # 1. 核心 AI 服务域名硬编码
   - DOMAIN-SUFFIX,openai.com,🤖 AI 专属
   - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 专属
   - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 专属
@@ -105,19 +125,36 @@ rules:
   - DOMAIN-SUFFIX,copilot.microsoft.com,🤖 AI 专属
   - DOMAIN-SUFFIX,githubcopilot.com,🤖 AI 专属
   - DOMAIN-SUFFIX,cursor.sh,🤖 AI 专属
+
+  # 国内 AI 强制直连
   - DOMAIN-SUFFIX,deepseek.com,DIRECT
-  - RULE-SET,my-direct,DIRECT
+
+  # 2. 个人自定义规则集（my-ai 提前到 my-direct 之前）
   - RULE-SET,my-ai,🤖 AI 专属
+  - RULE-SET,my-direct,DIRECT
+
+  # 3. 基础防骚扰与网络隔离
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,applications,DIRECT
+
+  # 4. 通用直连
   - RULE-SET,direct,DIRECT
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
+
+  # 5. Geo 兜底（先让 GEOSITE/GEOIP 有机会命中）
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+
+  # 6. 个人自定义直连（补缺，放 Geo 之后）
+  - RULE-SET,my-direct,DIRECT
+
+  # 7. 通用代理
   - RULE-SET,google,Proxy
   - RULE-SET,proxy,Proxy
   - RULE-SET,gfw,Proxy
   - RULE-SET,tldnotcn,Proxy
-  - GEOSITE,CN,DIRECT
-  - GEOIP,CN,DIRECT
+
+  # 8. 最终兜底
   - MATCH,Proxy
