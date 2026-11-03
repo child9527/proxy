@@ -165,12 +165,8 @@ function main(config) {
   config.tun = config.tun || {};
   config.tun.enable = true;
   config.tun["include-package"] = [
-    "com.android.chrome",           // Chrome
-    "org.mozilla.firefox",          // Firefox（如有）
-    "org.telegram.messenger",       // Telegram
-    // 需要走代理的其他 App，继续往下加
-    // "com.twitter.android",
-    // "com.google.android.youtube",
+  "com.android.vending",        // Google Play 商店
+  "com.google.android.gms",     // Google Play 服务（下载/更新依赖，建议一并加入）
   ];
 
   // ============================================================
