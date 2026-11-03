@@ -158,31 +158,23 @@ function main(config) {
   ];
 
   // ============================================================
-  // 3. FlClash 分应用代理：白名单模式
+  // 3. 极简规则：国内直连兜底 + Play 商店 CDN 专属通道 + 代理兜底
   // ============================================================
-  // 已注释：当前通过 FlClash 界面的分应用白名单管理，脚本内无需重复配置
-  // 保留此段以便日后需要时恢复（例如 Play 商店等界面列表未覆盖的包名）
-  //
-  // config.tun = config.tun || {};
-  // config.tun.enable = true;
-  // config.tun["include-package"] = [
-  //   "com.android.vending",        // Google Play 商店
-  //   "com.google.android.gms",     // Google Play 服务（下载/更新依赖，建议一并加入）
-  // ];
-
-  // ============================================================
-  // 4. 极简规则：只需国内直连兜底 + 代理兜底
-  // ============================================================
-  // 进入隧道的 App 大概率是浏览器/Telegram 等，但仍可能访问国内网站
-  // 所以保留一条国内直连兜底，避免 Chrome 访问国内网站也绕一圈
   config.rules = [
     "GEOSITE,CN,DIRECT",
     "GEOIP,CN,DIRECT,no-resolve",
+    
+    // ★ 关键补充：确保 Google Play 更新下载 CDN 稳定走代理通道
+    "DOMAIN-SUFFIX,gvt1.com," + MAIN_GROUP,
+    "DOMAIN-SUFFIX,gvt2.com," + MAIN_GROUP,
+    "DOMAIN-SUFFIX,gvt3.com," + MAIN_GROUP,
+    "DOMAIN-SUFFIX,1e100.net," + MAIN_GROUP,
+
     "MATCH," + MAIN_GROUP
   ];
 
   // ============================================================
-  // 5. 极简 DNS（无需为微信做任何特殊处理）
+  // 4. 极简 DNS
   // ============================================================
   config.dns = config.dns || {};
   config.dns.enable = true;
