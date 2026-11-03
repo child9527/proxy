@@ -134,7 +134,7 @@ function main(config) {
   const aiFriendlyProxies = aiMembers.length > 0 ? aiMembers : allProxies;
 
   // ============================================================
-  // 2. 代理组（保持不变）
+  // 2. 代理组
   // ============================================================
   config["proxy-groups"] = [
     {
@@ -158,23 +158,37 @@ function main(config) {
   ];
 
   // ============================================================
-  // 3. 极简规则：国内直连兜底 + Play 商店 CDN 专属通道 + 代理兜底
+  // 3. 脚本层显式白名单包名兜底（防止系统框架组件漏掉）
+  // ============================================================
+  config.tun = config.tun || {};
+  config.tun.enable = true;
+  config.tun["include-package"] = [
+    "com.android.vending",            // Google Play 商店
+    "com.google.android.gms",         // Google Play 服务
+    "com.google.android.gsf",         // Google 服务框架（更新下载依赖的核心组件）
+    "com.google.android.gsf.login"    // Google 账户管理
+  ];
+
+  // ============================================================
+  // 4. 分流规则：国内直连 + Play 更新核心 CDN 强制走代理 + 代理兜底
   // ============================================================
   config.rules = [
     "GEOSITE,CN,DIRECT",
     "GEOIP,CN,DIRECT,no-resolve",
     
-    // ★ 关键补充：确保 Google Play 更新下载 CDN 稳定走代理通道
+    // 强制保障 Google Play 应用下载与更新 CDN 走代理通道
     "DOMAIN-SUFFIX,gvt1.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt2.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt3.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,1e100.net," + MAIN_GROUP,
+    "DOMAIN-SUFFIX,play.googleapis.com," + MAIN_GROUP,
+    "DOMAIN-SUFFIX,android.clients.google.com," + MAIN_GROUP,
 
     "MATCH," + MAIN_GROUP
   ];
 
   // ============================================================
-  // 4. 极简 DNS
+  // 5. DNS 配置
   // ============================================================
   config.dns = config.dns || {};
   config.dns.enable = true;
