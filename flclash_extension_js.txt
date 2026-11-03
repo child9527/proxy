@@ -163,10 +163,12 @@ function main(config) {
   config.tun = config.tun || {};
   config.tun.enable = true;
   config.tun["include-package"] = [
-    "com.android.vending",            // Google Play 商店
-    "com.google.android.gms",         // Google Play 服务
-    "com.google.android.gsf",         // Google 服务框架（更新下载依赖的核心组件）
-    "com.google.android.gsf.login"    // Google 账户管理
+    "com.android.vending",              // Google Play 商店
+    "com.google.android.gms",           // Google Play 服务
+    "com.google.android.gsf",           // Google 服务框架
+    "com.android.providers.downloads",  // 下载管理程序
+    "android",                          // Android 系统核心进程
+    "com.android.systemui"              // 系统界面与通知
   ];
 
   // ============================================================
