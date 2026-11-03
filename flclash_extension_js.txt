@@ -8,7 +8,7 @@ function main(config) {
   const allProxies = (config.proxies || []).map(p => p.name);
 
   // ============================================================
-  // 1. 节点地理识别：四步顺序不可颠倒
+  // 1. 节点分类（保留你原有的逻辑，不做改动）
   // ============================================================
   const LINE_NOISE = new RegExp(
     [
@@ -25,7 +25,6 @@ function main(config) {
 
   const AI_FRIENDLY = new RegExp(
     [
-      // 亚洲
       "新加坡|狮城|singapore|\\bsg\\b",
       "|日本|东京|大阪|横滨|福冈|札幌|japan|tokyo|osaka|yokohama|fukuoka|sapporo|\\bjp\\b",
       "|韩国|首尔|首爾|釜山|korea|seoul|busan|\\bkr\\b",
@@ -39,11 +38,9 @@ function main(config) {
       "|孟加拉|达卡|bangladesh|dhaka",
       "|尼泊尔|加德满都|nepal|kathmandu",
       "|柬埔寨|金边|cambodia|phnom",
-      // 北美
       "|美国|美利坚|美西|美东|洛杉矶|纽约|旧金山|圣何塞|硅谷|西雅图|华盛顿|芝加哥|达拉斯|休斯顿|亚特兰大|迈阿密|波士顿|波特兰|凤凰城|拉斯维加斯|阿什本|水牛城|",
       "united\\s?states|\\busa\\b|\\bus\\b|america|los\\s?angeles|new\\s?york|san\\s?francisco|san\\s?jose|silicon\\s?valley|seattle|washington|chicago|dallas|houston|atlanta|miami|boston|portland|phoenix|ashburn|buffalo",
       "|加拿大|温哥华|多伦多|蒙特利尔|canada|vancouver|toronto|montreal|\\bca\\b",
-      // 欧洲
       "|英国|伦敦|曼彻斯特|united\\s?kingdom|britain|england|london|manchester|\\buk\\b",
       "|德国|法兰克福|慕尼黑|柏林|汉堡|杜塞尔多夫|germany|frankfurt|munich|berlin|hamburg|dusseldorf",
       "|法国|巴黎|france|paris",
@@ -67,13 +64,12 @@ function main(config) {
       "|爱尔兰|都柏林|ireland|dublin",
       "|塞尔维亚|贝尔格莱德|serbia|belgrade",
       "|乌克兰|基辅|ukraine|kyiv",
-      "|摩尔多瓦|基希谑乌|moldova|chisinau",
+      "|摩尔多瓦|基希讷乌|moldova|chisinau",
       "|格鲁吉亚|第比利斯|georgia|tbilisi",
       "|亚美尼亚|埃里温|armenia|yerevan",
       "|拉脱维亚|里加|latvia|riga",
       "|立陶宛|维尔纽斯|lithuania|vilnius",
       "|爱沙尼亚|塔林|estonia|tallinn",
-      // 中东 / 非洲 / 拉美 / 大洋洲
       "|阿联酋|迪拜|\\buae\\b|dubai",
       "|沙特|利雅得|saudi|riyadh",
       "|以色列|特拉维夫|israel|tel\\s?aviv",
@@ -137,6 +133,9 @@ function main(config) {
 
   const aiFriendlyProxies = aiMembers.length > 0 ? aiMembers : allProxies;
 
+  // ============================================================
+  // 2. 代理组（保持不变）
+  // ============================================================
   config["proxy-groups"] = [
     {
       name: MAIN_GROUP,
@@ -159,213 +158,50 @@ function main(config) {
   ];
 
   // ============================================================
-  // 2. 基础设施直连域名
+  // 3. FlClash 分应用代理：白名单模式
   // ============================================================
-  const infraDirectDomains = ["gitee.com", "gh-proxy.com", "cdn.jsdelivr.net"];
-
-  // ============================================================
-  // 3. DNS：Fake-IP 强制接管 Google
-  // ============================================================
-  if (!config.dns) config.dns = {};
-  config.dns.enable = true;
-  config.dns["enhanced-mode"] = "fake-ip";
-  config.dns["respect-rules"] = true;
-
-  // ★ 新增：微信/腾讯域名加入 fake-ip-filter，避免它们被 Fake-IP 后走错规则
-  config.dns["fake-ip-filter"] = [
-    "*.lan",
-    "*.local",
-    "time.*.com",
-    "ntp.*.com",
-    "*.msftconnecttest.com",
-    "*.srv.nintendo.net",
-    "*.pool.ntp.org",
-    "*.ntp.org",
-    "*.battlenet.com.cn",
-    "*.battlenet.com",
-    "*.blizzard.com",
-    "*.steamcontent.com",
-    "*.steamserver.net",
-    "*.music.163.com",
-    // ★ 微信 / 腾讯核心域
-    "*.qq.com",
-    "*.weixin.qq.com",
-    "*.wechat.com",
-    "*.gtimg.com",
-    "*.qpic.cn",
-    "*.myqcloud.com",
-    "*.tencent.com",
-    ...infraDirectDomains.flatMap(d => [d, `*.${d}`])
+  // 只让以下 App 进入 VPN 隧道，其余 App（微信、支付宝、国内应用）全部绕过
+  // 按需增删包名，这是整个配置最核心的一步
+  config.tun = config.tun || {};
+  config.tun.enable = true;
+  config.tun["include-package"] = [
+    "com.android.chrome",           // Chrome
+    "org.mozilla.firefox",          // Firefox（如有）
+    "org.telegram.messenger",       // Telegram
+    // 需要走代理的其他 App，继续往下加
+    // "com.twitter.android",
+    // "com.google.android.youtube",
   ];
 
-  const chinaDoh = [
+  // ============================================================
+  // 4. 极简规则：只需国内直连兜底 + 代理兜底
+  // ============================================================
+  // 进入隧道的 App 大概率是浏览器/Telegram 等，但仍可能访问国内网站
+  // 所以保留一条国内直连兜底，避免 Chrome 访问国内网站也绕一圈
+  config.rules = [
+    "GEOSITE,CN,DIRECT",
+    "GEOIP,CN,DIRECT,no-resolve",
+    "MATCH," + MAIN_GROUP
+  ];
+
+  // ============================================================
+  // 5. 极简 DNS（无需为微信做任何特殊处理）
+  // ============================================================
+  config.dns = config.dns || {};
+  config.dns.enable = true;
+  config.dns["enhanced-mode"] = "fake-ip";
+  config.dns["nameserver"] = [
     "https://dns.alidns.com/dns-query",
     "https://doh.pub/dns-query"
   ];
-
-  config.dns["proxy-server-nameserver"] = chinaDoh;
-  config.dns["nameserver"] = chinaDoh;
-
   config.dns["fallback"] = [
     "https://1.1.1.1/dns-query",
     "https://8.8.8.8/dns-query"
   ];
-
   config.dns["fallback-filter"] = {
     geoip: true,
-    "geoip-code": "CN",
-    ipcidr: ["240.0.0.0/4"]
+    "geoip-code": "CN"
   };
-
-  config.dns["nameserver-policy"] = {
-    "geosite:cn": chinaDoh,
-    "geosite:private": chinaDoh
-  };
-
-  infraDirectDomains.forEach(d => {
-    config.dns["nameserver-policy"][d] = chinaDoh;
-    config.dns["nameserver-policy"]["*." + d] = chinaDoh;
-  });
-
-  config.dns["ipv6"] = false;
-
-  config["geodata-mode"] = true;
-  config["geodata-loader"] = "standard";
-
-  // ★ 修正：geosite.dat 从 MetaCubeX 取，Loyalsoldier 不发 geosite.dat
-  config["geox-url"] = {
-    geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
-    geosite: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
-    mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
-  };
-
-  // ============================================================
-  // 4. Rule Providers
-  // ============================================================
-  const providers = {
-    reject: "domain",
-    icloud: "domain",
-    apple: "domain",
-    google: "domain",
-    proxy: "domain",
-    direct: "domain",
-    private: "domain",
-    gfw: "domain",
-    tldnotcn: "tld-not-cn",
-    lancidr: "ipcidr",
-    applications: "classical"
-  };
-
-  config["rule-providers"] = {};
-
-  for (let name in providers) {
-    const file = providers[name] === "tld-not-cn" ? "tld-not-cn" : name;
-    config["rule-providers"][name] = {
-      type: "http",
-      behavior: providers[name] === "tld-not-cn" ? "domain" : providers[name],
-      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/" + file + ".txt",
-      // ★ 修正：path 与 url 文件名保持一致
-      path: "./ruleset/" + file + ".yaml",
-      interval: 86400
-    };
-  }
-
-  config["rule-providers"]["my-direct"] = {
-    type: "http",
-    behavior: "domain",
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-direct.yaml",
-    path: "./ruleset/my-direct.yaml",
-    interval: 86400
-  };
-
-  config["rule-providers"]["my-ai"] = {
-    type: "http",
-    behavior: "domain",
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/clash-latest/main/clash_rules/my-ai.yaml",
-    path: "./ruleset/my-ai.yaml",
-    interval: 86400
-  };
-
-  // ============================================================
-  // 5. 分流规则（方案 C：GEOSITE/GEOIP CN 提前 + 微信硬直连）
-  // ============================================================
-  config.rules = [
-    // 0. 基础设施直连
-    ...infraDirectDomains.map(d => "DOMAIN-SUFFIX," + d + ",DIRECT"),
-
-    // ★ 0.5 微信 / 腾讯强制直连（放最前，避免被 tldnotcn/MATCH 吃掉）
-    "DOMAIN-SUFFIX,weixin.qq.com,DIRECT",
-    "DOMAIN-SUFFIX,wechat.com,DIRECT",
-    "DOMAIN-SUFFIX,wx.qq.com,DIRECT",
-    "DOMAIN-SUFFIX,qq.com,DIRECT",
-    "DOMAIN-SUFFIX,gtimg.com,DIRECT",
-    "DOMAIN-SUFFIX,qpic.cn,DIRECT",
-    "DOMAIN-SUFFIX,tencent.com,DIRECT",
-    "DOMAIN-SUFFIX,tencent-cloud.com,DIRECT",
-    "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
-    "DOMAIN-SUFFIX,weixinbridge.com,DIRECT",
-    "DOMAIN-KEYWORD,wechat,DIRECT",
-    "DOMAIN-KEYWORD,weixin,DIRECT",
-
-    // 1. 核心 AI 服务域名硬编码
-    "DOMAIN-SUFFIX,openai.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,chatgpt.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,oaistatic.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,oaiusercontent.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,sora.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,anthropic.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,claude.ai," + AI_GROUP,
-    "DOMAIN-SUFFIX,claudeusercontent.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,x.ai," + AI_GROUP,
-    "DOMAIN-SUFFIX,grok.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,perplexity.ai," + AI_GROUP,
-    "DOMAIN-SUFFIX,aistudio.google.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,ai.google.dev," + AI_GROUP,
-    "DOMAIN-SUFFIX,generativelanguage.googleapis.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,gemini.google.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,copilot.microsoft.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,githubcopilot.com," + AI_GROUP,
-    "DOMAIN-SUFFIX,cursor.sh," + AI_GROUP,
-
-    // 国内 AI 强制直连
-    "DOMAIN-SUFFIX,deepseek.com,DIRECT",
-
-    // Google 全系
-    "GEOSITE,google," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,gvt1.com," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,gvt2.com," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,gvt3.com," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,1e100.net," + MAIN_GROUP,
-    "DOMAIN-KEYWORD,google," + MAIN_GROUP,
-    // ★ 删除无效的 GEOIP,google（标准 geoip.dat 无此条目）
-
-    // ★ 2. my-ai 提到 my-direct 之前，避免 AI 域名被 my-direct 直连吃掉
-    "RULE-SET,my-ai," + AI_GROUP,
-    "RULE-SET,my-direct,DIRECT",
-
-    // 3. 基础防骚扰与网络隔离
-    "RULE-SET,private,DIRECT",
-    "RULE-SET,reject,REJECT",
-    "RULE-SET,applications,DIRECT",
-
-    // 4. 通用直连
-    "RULE-SET,direct,DIRECT",
-    "RULE-SET,icloud,DIRECT",
-    "RULE-SET,apple,DIRECT",
-
-    // ★ 5. 方案 C：GEOSITE/GEOIP CN 提前到 tldnotcn 之前
-    "GEOSITE,CN,DIRECT",
-    "GEOIP,CN,DIRECT",
-
-    // 6. 通用代理
-    "RULE-SET,google," + MAIN_GROUP,
-    "RULE-SET,proxy," + MAIN_GROUP,
-    "RULE-SET,gfw," + MAIN_GROUP,
-    "RULE-SET,tldnotcn," + MAIN_GROUP,
-
-    // 7. 最终兜底
-    "MATCH," + MAIN_GROUP
-  ];
 
   return config;
 }
