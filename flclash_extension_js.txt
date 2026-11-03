@@ -134,7 +134,7 @@ function main(config) {
   const aiFriendlyProxies = aiMembers.length > 0 ? aiMembers : allProxies;
 
   // ============================================================
-  // 2. 代理组
+  // 2. 代理组（保持不变）
   // ============================================================
   config["proxy-groups"] = [
     {
@@ -158,39 +158,38 @@ function main(config) {
   ];
 
   // ============================================================
-  // 3. 脚本层显式白名单包名兜底（防止系统框架组件漏掉）
+  // 3. FlClash 分应用代理：白名单模式（已补充 Google 服务底层包名）
   // ============================================================
   config.tun = config.tun || {};
   config.tun.enable = true;
   config.tun["include-package"] = [
-    "com.android.vending",              // Google Play 商店
-    "com.google.android.gms",           // Google Play 服务
-    "com.google.android.gsf",           // Google 服务框架
-    "com.android.providers.downloads",  // 下载管理程序
-    "android",                          // Android 系统核心进程
-    "com.android.systemui"              // 系统界面与通知
+    "com.android.vending",          // Google Play 商店
+    "com.google.android.gms",       // Google Play 服务（核心下载组件）
+    "com.google.android.gsf",       // Google 服务框架
   ];
 
   // ============================================================
-  // 4. 分流规则：国内直连 + Play 更新核心 CDN 强制走代理 + 代理兜底
+  // 4. 优化规则：加入 Google 全系与 CDN 规则，确保更新下载不卡顿
   // ============================================================
   config.rules = [
-    "GEOSITE,CN,DIRECT",
-    "GEOIP,CN,DIRECT,no-resolve",
-    
-    // 强制保障 Google Play 应用下载与更新 CDN 走代理通道
+    // 强制 Google 全系及下载 CDN 走代理（防止因走国内直连或匹配错误导致转圈）
+    "GEOSITE,google," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt1.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt2.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt3.com," + MAIN_GROUP,
     "DOMAIN-SUFFIX,1e100.net," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,play.googleapis.com," + MAIN_GROUP,
-    "DOMAIN-SUFFIX,android.clients.google.com," + MAIN_GROUP,
+    "DOMAIN-KEYWORD,google," + MAIN_GROUP,
 
+    // 国内直连兜底
+    "GEOSITE,CN,DIRECT",
+    "GEOIP,CN,DIRECT,no-resolve",
+
+    // 最终兜底
     "MATCH," + MAIN_GROUP
   ];
 
   // ============================================================
-  // 5. DNS 配置
+  // 5. 极简 DNS
   // ============================================================
   config.dns = config.dns || {};
   config.dns.enable = true;
