@@ -77,59 +77,143 @@ rule-providers:
 
 # 分流规则
 rules:
-  # 0. 基础设施直连
   - DOMAIN-SUFFIX,gitee.com,DIRECT
   - DOMAIN-SUFFIX,gh-proxy.com,DIRECT
   - DOMAIN-SUFFIX,gh-proxy.org,DIRECT
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
-  - RULE-SET,lancidr,DIRECT
-
-  # 1 微信 / 腾讯强制直连（放最前，避免被 tldnotcn/MATCH 吃掉）
-  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
-  - DOMAIN-SUFFIX,wechat.com,DIRECT
-  - DOMAIN-SUFFIX,wx.qq.com,DIRECT
-  - DOMAIN-SUFFIX,qq.com,DIRECT
-  - DOMAIN-SUFFIX,gtimg.com,DIRECT
-  - DOMAIN-SUFFIX,qpic.cn,DIRECT
-  - DOMAIN-SUFFIX,tencent.com,DIRECT
-  - DOMAIN-SUFFIX,tencent-cloud.com,DIRECT
-  - DOMAIN-SUFFIX,myqcloud.com,DIRECT
-  - DOMAIN-SUFFIX,weixinbridge.com,DIRECT
-
-  # 2. 核心 AI 服务域名硬编码（仅保留“保险”域名，其余交给 my-ai）
   - DOMAIN-SUFFIX,openai.com,🤖 AI 专属
   - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,sora.com,🤖 AI 专属
   - DOMAIN-SUFFIX,anthropic.com,🤖 AI 专属
   - DOMAIN-SUFFIX,claude.ai,🤖 AI 专属
+  - DOMAIN-SUFFIX,claudeusercontent.com,🤖 AI 专属
   - DOMAIN-SUFFIX,x.ai,🤖 AI 专属
   - DOMAIN-SUFFIX,grok.com,🤖 AI 专属
-
-  # 国内 AI 强制直连
+  - DOMAIN-SUFFIX,perplexity.ai,🤖 AI 专属
+  - DOMAIN-SUFFIX,aistudio.google.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,ai.google.dev,🤖 AI 专属
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,copilot.microsoft.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,githubcopilot.com,🤖 AI 专属
+  - DOMAIN-SUFFIX,cursor.sh,🤖 AI 专属
   - DOMAIN-SUFFIX,deepseek.com,DIRECT
-
-  # 3. 个人自定义规则集（my-ai 优先于 my-direct）
-  - RULE-SET,my-ai,🤖 AI 专属
   - RULE-SET,my-direct,DIRECT
-
-  # 4. 基础防骚扰与网络隔离
+  - RULE-SET,my-ai,🤖 AI 专属
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
-
-  # 5. 通用直连
   - RULE-SET,direct,DIRECT
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
-
-  # 6. Geo 兜底（no-resolve：仅在已知 IP 时匹配，避免额外 DNS 查询与泄露）
-  - GEOSITE,CN,DIRECT
-  - GEOIP,CN,DIRECT,no-resolve
-
-  # 7. 通用代理
   - RULE-SET,google,Proxy
   - RULE-SET,proxy,Proxy
   - RULE-SET,gfw,Proxy
-  # ⚠️ 注意：tldnotcn 会匹配所有非 .cn 后缀，确保需要直连的域名已在前面规则中声明
   - RULE-SET,tldnotcn,Proxy
-
-  # 8. 最终兜底
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,Proxy
+
+# DNS 配置（从扩展脚本迁移至全局扩展配置）
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  respect-rules: true
+
+  # 用于解析 DoH 上游域名等 DNS 引导地址，使用 IP 避免 bootstrap 循环
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  # 代理节点域名解析，保持使用国内 DNS 服务
+  proxy-server-nameserver:
+    - "https://dns.alidns.com/dns-query"
+    - "https://doh.pub/dns-query"
+
+  # 普通 DNS：国内 DNS；境外兜底 DNS 通过 Proxy 组连接
+  nameserver:
+    - "https://dns.alidns.com/dns-query"
+    - "https://doh.pub/dns-query"
+  fallback:
+    - "https://dns.google/dns-query#Proxy"
+    - "https://1.1.1.1/dns-query#Proxy"
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+  # 按规则集指定 DNS；AI 域名使用境外 DoH，并经 AI 专属组查询
+  nameserver-policy:
+    "geosite:cn":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "rule-set:my-direct":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "rule-set:my-ai":
+      - "https://dns.google/dns-query#🤖 AI 专属"
+      - "https://1.1.1.1/dns-query#🤖 AI 专属"
+    "rule-set:direct":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "gitee.com":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "*.gitee.com":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "gh-proxy.com":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "*.gh-proxy.com":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+    "cdn.jsdelivr.net":
+      - "https://dns.alidns.com/dns-query"
+    "*.cdn.jsdelivr.net":
+      - "https://dns.alidns.com/dns-query"
+
+  fake-ip-filter:
+    - "rule-set:my-direct"
+    - "rule-set:my-ai"
+    - "rule-set:direct"
+    - "rule-set:apple"
+    - "rule-set:icloud"
+    - "*.lan"
+    - "*.local"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "*.msftconnecttest.com"
+    - "*.srv.nintendo.net"
+    - "*.pool.ntp.org"
+    - "*.ntp.org"
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blizzard.com"
+    - "*.steamcontent.com"
+    - "*.steamserver.net"
+    - "*.music.163.com"
+    - "*.google.com"
+    - "*.googleapis.com"
+    - "*.gstatic.com"
+    - "*.recaptcha.net"
+    - "*.googleusercontent.com"
+    - "accounts.google.com"
+    - "accounts.youtube.com"
+    - "drive.google.com"
+    - "gitee.com"
+    - "*.gitee.com"
+    - "gh-proxy.com"
+    - "*.gh-proxy.com"
+    - "cdn.jsdelivr.net"
+    - "*.cdn.jsdelivr.net"
+
+# Geo 数据配置（从扩展脚本迁移至全局扩展配置）
+geodata-mode: true
+geodata-loader: standard
+geox-url:
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geosite.dat"
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat"
