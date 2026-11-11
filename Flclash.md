@@ -12,7 +12,7 @@
 
 [https://child9527.github.io/software/](https://child9527.github.io/software/)
 
-找到 **FlClash Android**，点击 **原始下载** 或任意镜像按钮（如 GH-Proxy Com / GH-Proxy Org）下载 APK 并安装。
+找到 **FlClash Android**，点击任意下载按钮（**原始下载** / **GH-Proxy Com** / **GH-Proxy Org**）下载 APK 并安装。
 
 ![下载 FlClash](image/step01-download.svg)
 
@@ -45,7 +45,7 @@
 1. 点击右上角 **+**
 2. 选择 **链接**
 
-![选择从链接导入](image/step04-import-link-menu.svg)
+![选择从链接导入](image/ sequentially 从链接导入](image/step04-import-link-menu.svg)
 
 在弹出窗口中：
 
@@ -70,12 +70,12 @@
 
 在 FlClash 中进入：**工具 → 进阶配置 → 脚本**。
 
-1. 点击右上角 **+**，选择从零开始（或新建脚本）
-2. 清空编辑框中的默认内容
+1. 点击右上角 **+**，选择「从零开始」（或新建脚本）
+2. 删除编辑框中的所有默认内容
 3. 粘贴刚才复制的脚本全文并保存
 4. 按提示为脚本命名（示例：`extension_js`）
 
-保存后脚本会出现在列表中。若以本地方式保存，类型一般为「本地」；使用远程链接时可能显示为「远程」。
+保存后脚本会出现在列表中。按本步骤操作一般为「本地」；若使用远程链接则会显示为「远程」。
 
 ![保存扩展脚本](image/step07-save-script.svg)
 
@@ -83,7 +83,7 @@
 
 ## 7. 为订阅启用扩展脚本
 
-回到 **配置** 页，**长按** 刚导入的订阅（例如 `snake982_2`），在菜单中选择 **扩展**。
+回到 **配置** 页，**长按** 刚导入的订阅（例如 `snake982_2`），在弹出菜单中选择 **扩展**。
 
 ![打开扩展菜单](image/step08-config-extension.svg)
 
