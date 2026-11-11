@@ -12,7 +12,7 @@
 
 [https://child9527.github.io/software/](https://child9527.github.io/software/)
 
-找到 **FlClash Android**，点击任意下载按钮（**原始下载** / **GH-Proxy Com** / **GH-Proxy Org**）下载 APK 并安装。
+找到 **FlClash Android**，点击任意下载按钮（**原始下载** / **GH-Proxy Com** / **GH-Proxy Org**）下载 APK 并安装，推荐选择**GH-Proxy Org**。
 
 ![下载 FlClash](image/step01-download.png)
 
