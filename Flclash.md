@@ -14,7 +14,7 @@
 
 找到 **FlClash Android**，点击任意下载按钮（**原始下载** / **GH-Proxy Com** / **GH-Proxy Org**）下载 APK 并安装。
 
-![下载 FlClash](image/step01-download.svg)
+![下载 FlClash](image/step01-download.png)
 
 ---
 
@@ -22,7 +22,7 @@
 
 安装完成后打开 FlClash，在底部导航栏点击 **配置**。
 
-![打开配置](image/step02-open-config.svg)
+![打开配置](image/step02-open-config.png)
 
 ---
 
@@ -34,7 +34,7 @@
 
 在 **Clash 订阅** 区域，任选一个订阅并点击 **复制链接**（推荐 `snakem982`）。
 
-![复制订阅链接](image/step03-copy-subscription.svg)
+![复制订阅链接](image/step03-copy-subscription.png)
 
 ---
 
@@ -45,7 +45,7 @@
 1. 点击右上角 **+**
 2. 选择 **链接**
 
-![选择从链接导入](image/step04-import-link-menu.svg)
+![选择从链接导入](image/step04-import-link-menu.png)
 
 在弹出窗口中：
 
@@ -54,7 +54,7 @@
 
 然后点击右上角 **✔** 保存。
 
-![粘贴订阅链接](image/step05-paste-url.svg)
+![粘贴订阅链接](image/step05-paste-url.png)
 
 ---
 
@@ -62,7 +62,7 @@
 
 再次打开科学订阅页面，在 **规则及配置** 中找到 **FlClash全局扩展脚本**，点击 **复制内容**。
 
-![复制扩展脚本](image/step06-copy-extension.svg)
+![复制扩展脚本](image/step06-copy-extension.png)
 
 ---
 
@@ -77,7 +77,7 @@
 
 保存后脚本会出现在列表中。按本步骤操作一般为「本地」；若使用远程链接则会显示为「远程」。
 
-![保存扩展脚本](image/step07-save-script.svg)
+![保存扩展脚本](image/step07-save-script.png)
 
 ---
 
@@ -85,14 +85,14 @@
 
 回到 **配置** 页，**长按** 刚导入的订阅（例如 `snake982_2`），在弹出菜单中选择 **扩展**。
 
-![打开扩展菜单](image/step08-config-extension.svg)
+![打开扩展菜单](image/step08-config-extension.png)
 
 在扩展设置中：
 
 1. 扩展模式选择 **脚本**（使用扩展脚本改写整个配置）
 2. 在扩展脚本列表中勾选你在上一步创建的脚本（如 `extension_js`）
 
-![选择扩展脚本](image/step09-select-script.svg)
+![选择扩展脚本](image/step09-select-script.png)
 
 ---
 
@@ -106,7 +106,7 @@
 
 看到运行状态正常后即可开始使用。
 
-![启动 VPN 与规则模式](image/step10-run.svg)
+![启动 VPN 与规则模式](image/step10-run.png)
 
 ---
 
