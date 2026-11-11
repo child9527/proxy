@@ -45,7 +45,7 @@
 1. 点击右上角 **+**
 2. 选择 **链接**
 
-![选择从链接导入](image/ sequentially 从链接导入](image/step04-import-link-menu.svg)
+![选择从链接导入](image/step04-import-link-menu.svg)
 
 在弹出窗口中：
 
