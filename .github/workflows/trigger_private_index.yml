@@ -18,13 +18,12 @@ jobs:
     steps:
       - name: 触发 Private_proxy「生成科学订阅页面」
         env:
-          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          GH_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
         run: |
           if [ -z "$GH_TOKEN" ]; then
-            echo "❌ 缺少 secrets.PRIVATE_REPO_TOKEN（需对 Private_proxy 有 workflow 权限）"
+            echo "❌ 缺少 secrets.PUBLIC_REPO_TOKEN（需对 Private_proxy 有 workflow 权限）"
             exit 1
           fi
-          # repository_dispatch：私仓 index.yml 已监听 event_type
           curl -sS -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GH_TOKEN}" \
