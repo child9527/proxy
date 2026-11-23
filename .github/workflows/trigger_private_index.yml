@@ -1,6 +1,6 @@
 name: 触发私仓生成科学订阅页面
 
-# 公仓无法被私仓 push 监听；此处在三个扩展脚本变更时远程触发 Private_proxy/index.yml
+# 公仓无法被私仓 push 监听；此处在三个扩展脚本变更时远程触发私仓/index.yml
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: 触发 Private_proxy「生成科学订阅页面」
+      - name: 触发 私仓「生成科学订阅页面」
         env:
           GH_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
         run: |
