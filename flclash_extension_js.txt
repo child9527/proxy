@@ -8,7 +8,7 @@ function main(config) {
   const allProxies = (config.proxies || []).map(p => p.name);
 
   // ============================================================
-  // 1. 节点分类（保留你原有的逻辑，不做改动）
+  // 1. 节点分类
   // ============================================================
   const LINE_NOISE = new RegExp(
     [
@@ -134,7 +134,7 @@ function main(config) {
   const aiFriendlyProxies = aiMembers.length > 0 ? aiMembers : allProxies;
 
   // ============================================================
-  // 2. 代理组（保持不变）
+  // 2. 代理组
   // ============================================================
   config["proxy-groups"] = [
     {
