@@ -8,7 +8,7 @@ function main(config) {
   const allProxies = (config.proxies || []).map(p => p.name);
 
   // ============================================================
-  // 1. 节点地理识别：四步顺序不可颠倒
+  // 1. 节点地理识别
   // ============================================================
   const LINE_NOISE = new RegExp(
     [
@@ -25,7 +25,6 @@ function main(config) {
 
   const AI_FRIENDLY = new RegExp(
     [
-      // 亚洲
       "新加坡|狮城|singapore|\\bsg\\b",
       "|日本|东京|大阪|横滨|福冈|札幌|japan|tokyo|osaka|yokohama|fukuoka|sapporo|\\bjp\\b",
       "|韩国|首尔|首爾|釜山|korea|seoul|busan|\\bkr\\b",
@@ -39,11 +38,9 @@ function main(config) {
       "|孟加拉|达卡|bangladesh|dhaka",
       "|尼泊尔|加德满都|nepal|kathmandu",
       "|柬埔寨|金边|cambodia|phnom",
-      // 北美
       "|美国|美利坚|美西|美东|洛杉矶|纽约|旧金山|圣何塞|硅谷|西雅图|华盛顿|芝加哥|达拉斯|休斯顿|亚特兰大|迈阿密|波士顿|波特兰|凤凰城|拉斯维加斯|阿什本|水牛城|",
       "united\\s?states|\\busa\\b|\\bus\\b|america|los\\s?angeles|new\\s?york|san\\s?francisco|san\\s?jose|silicon\\s?valley|seattle|washington|chicago|dallas|houston|atlanta|miami|boston|portland|phoenix|ashburn|buffalo",
       "|加拿大|温哥华|多伦多|蒙特利尔|canada|vancouver|toronto|montreal|\\bca\\b",
-      // 欧洲
       "|英国|伦敦|曼彻斯特|united\\s?kingdom|britain|england|london|manchester|\\buk\\b",
       "|德国|法兰克福|慕尼黑|柏林|汉堡|杜塞尔多夫|germany|frankfurt|munich|berlin|hamburg|dusseldorf",
       "|法国|巴黎|france|paris",
@@ -73,7 +70,6 @@ function main(config) {
       "|拉脱维亚|里加|latvia|riga",
       "|立陶宛|维尔纽斯|lithuania|vilnius",
       "|爱沙尼亚|塔林|estonia|tallinn",
-      // 中东 / 非洲 / 拉美 / 大洋洲
       "|阿联酋|迪拜|\\buae\\b|dubai",
       "|沙特|利雅得|saudi|riyadh",
       "|以色列|特拉维夫|israel|tel\\s?aviv",
