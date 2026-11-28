@@ -223,7 +223,7 @@ function main(config) {
   // ============================================================
   config.dns = config.dns || {};
   config.dns.enable = true;
-  config.dns["enhanced-mode"] = "fake-ip";
+  config.dns["enhanced-mode"] = "redir-host";
   config.dns["nameserver"] = [
     "https://dns.alidns.com/dns-query",
     "https://doh.pub/dns-query"
