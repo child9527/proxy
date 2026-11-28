@@ -233,5 +233,32 @@ function main(config) {
     "geoip-code": "CN"
   };
 
+  // ---- 关键补充：让直连域名跳过 fake-ip，避免 TUN 模式下直连解析失败 ----
+  config.dns["fake-ip-filter"] = [
+    "*.gongwuyun.com",
+    "*.gongwuyun.cn",
+    "*.mohurd.gov.cn",
+    "*.zhelibuild.com",
+    "*.6vdy.com",
+    "*.hao6v.cc",
+    "*.66tutup.com",
+    "*.yinghezhinan.com",
+    "*.wdzyk.com",
+    "*.ganzhiyati.com",
+    "*.12xzzx.com",
+    "*.4fb.cn",
+    "*.page.gd",
+    "*.child9527.github.io",
+    "*.tampermonkey.net",
+    "*.gopeed.com",
+    "*.link3.cc",
+    "*.indevs.in",
+    "*.my9.ltd",
+    "*.cron-job.org",
+    "*.gh-proxy.org",
+    "*.gh-proxy.com",
+    "*.ghproxy.net",
+    "*.ghproxy.vip"
+
   return config;
 }
