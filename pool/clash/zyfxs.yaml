@@ -1,328 +1,209 @@
 proxies:
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_01
-  server: 66.163.114.166
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: blog.findconnectwithemployersandbuildprofessionalnetwork.com
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: false
 - type: vless
-  name: 🇹🇷_土耳其_youtube@资源分享师_02
-  server: 185.86.155.4
-  port: 14443
-  uuid: 7af8c5d0-ede6-40ab-9b9e-d7924f79d109
+  name: youtube@资源分享师_01
+  server: 8.35.211.73
+  port: 2087
+  uuid: 9f534ac4-3c58-4a16-8b74-13dff09a0cf1
   udp: true
   tls: true
-  servername: cosmo-convert.ru
-  sni: cosmo-convert.ru
-  skip-cert-verify: false
-  client-fingerprint: edge
-  reality-opts:
-    public-key: TBvwkxwgTGYba7Jl3f2WcNBFvcKJ8uYHjYYdiyZTYCg
-    short-id: d9662905
-  network: grpc
-  grpc-opts:
-    grpc-service-name: nexusGrpc
-- type: vless
-  name: 🇦🇹_奥地利_youtube@资源分享师_03
-  server: 144.31.129.67
-  port: 443
-  uuid: 7af8c5d0-ede6-40ab-9b9e-d7924f79d109
-  udp: true
-  tls: true
-  servername: coinjoin-video-stri.ru
-  sni: coinjoin-video-stri.ru
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: aIxjIWyXHiV-aidKKODGmQva0yUPJzQ0Jzp4lg_urQY
-    short-id: d9662905
-  network: grpc
-  grpc-opts:
-    grpc-service-name: nexusGrpc
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_04
-  server: waic.pro.main.sys-metric-report.com
-  port: 28014
-  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
-  cipher: chacha20-ietf-poly1305
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇵🇱_波兰_youtube@资源分享师_07
-  server: 177.3.252.114
-  port: 443
-  uuid: 639b131f-d0f3-460c-aa17-423047f8a5df
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: poland.mcufa.pro
-  sni: poland.mcufa.pro
+  servername: d39333476.pages.dev
+  sni: d39333476.pages.dev
   skip-cert-verify: false
   client-fingerprint: chrome
-  reality-opts:
-    public-key: -P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo
-- type: vmess
-  name: youtube@资源分享师_11
-  server: US032018.ssgreen.org
-  port: 443
-  uuid: a6acf25e-8d32-4e8e-a62d-9acbf47218c3
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /wes
-- type: vmess
-  name: youtube@资源分享师_13
-  server: US122201.ssgreen.org
-  port: 443
-  uuid: 35cf21d9-0ec9-4c66-9ef3-e40fcfa3115a
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-- type: hysteria2
-  name: 🇦🇪_阿拉伯联合酋长国_youtube@资源分享师_15
-  server: 128.254.186.190
-  port: 13337
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  udp: true
-  servername: mother-earth.fyi
-  sni: mother-earth.fyi
-  skip-cert-verify: false
+    path: /resource
+    headers:
+      Host: d39333476.pages.dev
 - type: vless
-  name: youtube@资源分享师_20
-  server: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  name: 🇳🇱_荷兰_youtube@资源分享师_03
+  server: 188.164.248.110
   port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  uuid: 13134515-adc7-404b-8d2a-f9ad99e8dcbd
   udp: true
   tls: true
-  servername: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  servername: imanvipreserved.pages.dev
+  sni: imanvipreserved.pages.dev
   skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
-- type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_22
-  server: hw7.jirjirakirani.com
-  port: 993
-  uuid: 52406fc7-b008-4985-8de1-4bc43b2b873a
-  udp: true
-  tls: true
-  servername: hw7.jirjirakirani.com.
-  sni: hw7.jirjirakirani.com.
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: imanvipreserved.pages.dev
 - type: vless
-  name: youtube@资源分享师_23
-  server: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  name: youtube@资源分享师_04
+  server: 172.64.154.113
+  port: 8443
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
   udp: true
   tls: true
-  servername: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  servername: freeceshi6.frii.site
+  sni: freeceshi6.frii.site
   skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      Host: freeceshi6.frii.site
 - type: vless
-  name: youtube@资源分享师_25
-  server: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  name: youtube@资源分享师_05
+  server: 172.64.149.88
   port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  uuid: d37a75db-76b6-4db8-b213-0d5b044d138d
   udp: true
   tls: true
-  servername: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ssssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  servername: top-e4s.pages.dev
+  sni: top-e4s.pages.dev
   skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: top-e4s.pages.dev
 - type: vless
-  name: youtube@资源分享师_26
-  server: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  name: 🇰🇷_韩国_youtube@资源分享师_06
+  server: w.fugui.us
   port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  uuid: 21096a6d-88df-49c7-8882-d09e73b4da95
+  flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
+  servername: w.fugui.us
+  sni: w.fugui.us
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: J2yp_4F_8h4hHTntLf3URZRrdScOhOPOt1ct9LZJ5n4
+    short-id: 9cab9354c40d5f68
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_10
+  server: jp2game.xyy123.win
+  port: 443
+  uuid: 330a570e-c0ba-4a9d-8e37-d20540cc8eaa
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: stg.nvbugspro.nvidia.com
+  sni: stg.nvbugspro.nvidia.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KBPuCiAKJQQtlsodm5MIBFfYf-TGsrjCK5GGJzJJli4
+    short-id: 6a3c0a718181
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_11
+  server: jp2music.xyy123.win
+  port: 443
+  uuid: 8816de02-ceeb-4155-a539-074e8de44ee6
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: us.amazon.com
+  sni: us.amazon.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GeKuYNeAqQQkTN9OMJxXA9I-rXs7IiGh4Sl82crCITc
+    short-id: 253e450553a2
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_14
+  server: jp2music.xyy123.win
+  port: 443
+  uuid: 330a570e-c0ba-4a9d-8e37-d20540cc8eaa
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: stg.nvbugspro.nvidia.com
+  sni: stg.nvbugspro.nvidia.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KBPuCiAKJQQtlsodm5MIBFfYf-TGsrjCK5GGJzJJli4
+    short-id: 6a3c0a718181
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_15
+  server: dl.zanjanphone.ir
+  port: 42138
+  uuid: 4fdf9cd1-b7cf-4989-9d3a-63e4efb2b4b3
+  udp: true
+  tls: true
+  servername: login.zanjanphone.ir
+  sni: login.zanjanphone.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: login.zanjanphone.ir
+- type: vless
+  name: youtube@资源分享师_16
+  server: 172.67.67.89
+  port: 443
+  uuid: 4859c235-2530-4062-9a0b-ea859cbbf861
+  udp: true
+  tls: true
+  servername: 1.proxy2.us.ci.
+  sni: 1.proxy2.us.ci.
   skip-cert-verify: false
   alpn:
+  - h3
   - h2
   - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 1.proxy2.us.ci.
 - type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_27
-  server: hw7.jirjirakirani.com
+  name: 🇺🇸_美国_youtube@资源分享师_17
+  server: saas.sin.fan
+  port: 443
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  udp: true
+  tls: true
+  servername: v2n6.11676767.xyz
+  sni: v2n6.11676767.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ranking/htm
+    headers:
+      Host: v2n6.11676767.xyz
+- type: vless
+  name: 🇳🇱_荷兰_youtube@资源分享师_18
+  server: 13.141.36.43
+  port: 443
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: 6bf329t.nl18.h1clayd.click
+  sni: 6bf329t.nl18.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: p35RUaaaItuoyNiCrLpGeStBUpEJMSiZ2AajdfhhmiM
+    short-id: 92aee92130b46fe2
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_20
+  server: hw8.iranichergh.com
   port: 993
-  uuid: 52406fc7-b008-4985-8de1-4bc43b2b873a
+  uuid: 978d2a58-bd01-4b61-b953-dc8e66728460
   udp: true
   tls: true
-  servername: hw7.jirjirakirani.com.
-  sni: hw7.jirjirakirani.com.
+  servername: hw8.iranichergh.com.
+  sni: hw8.iranichergh.com.
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /
 - type: vless
-  name: 🇮🇪_爱尔兰_youtube@资源分享师_28
-  server: 83.141.92.168
-  port: 443
-  uuid: a7595994-695d-484e-bfcb-e9fbb73cfa39
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: sladovna.russianpiwo.fun
-  sni: sladovna.russianpiwo.fun
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY
-    short-id: 7a7d19880a9ee786
-- type: vless
-  name: youtube@资源分享师_31
-  server: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
-- type: ss
-  name: 🇩🇪_德国_youtube@资源分享师_32
-  server: 47.254.128.109
-  port: 443
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-  cipher: 2022-blake3-chacha20-poly1305
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇧🇬_保加利亚_youtube@资源分享师_36
-  server: p2real33.greewebservices.ir
-  port: 1330
-  uuid: 8f2940bc-a353-4efc-a9a0-22184cd4f1ac
-  udp: true
-  tls: true
-  servername: play.googleapis.com
-  sni: play.googleapis.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 9b60d3
-- type: vless
-  name: youtube@资源分享师_37
-  server: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
-- type: vless
-  name: youtube@资源分享师_38
-  server: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
-- type: vless
-  name: youtube@资源分享师_46
-  server: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: sssss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
-- type: vless
-  name: youtube@资源分享师_47
-  server: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: s.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
-- type: vless
-  name: youtube@资源分享师_48
+  name: 🇩🇪_德国_youtube@资源分享师_21
   server: hw8.iranichergh.com
   port: 993
   uuid: 978d2a58-bd01-4b61-b953-dc8e66728460
@@ -338,130 +219,721 @@ proxies:
   ws-opts:
     path: /
 - type: vless
-  name: youtube@资源分享师_49
-  server: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
+  name: 🇯🇵_日本_youtube@资源分享师_22
+  server: 107.191.53.86
+  port: 4798
+  uuid: 16a5e4f6-246f-406d-9787-1b5686a97cbc
   udp: true
   tls: true
-  servername: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
-- type: vless
-  name: youtube@资源分享师_51
-  server: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: ss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kFfXBQ3droMCFIKqB23IBmTp
-- type: vless
-  name: youtube@资源分享师_52
-  server: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  port: 443
-  uuid: d2f2639b-ff62-4553-abce-d75e231b300c
-  udp: true
-  tls: true
-  servername: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  sni: sss.0ab62183-3cf1-45db-9b75-fc16b366e4af.ccwu.cc
-  skip-cert-verify: false
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TxVauYsjcNzDin4f5nL
-- type: vless
-  name: youtube@资源分享师_57
-  server: cdn.8211992.xyz
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  servername: mao.kipfelmao.de5.net
-  sni: mao.kipfelmao.de5.net
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /api/v1/guests/profiles/5de14443985f/
+    path: /@Marisa_kristi
     headers:
-      Host: mao.kipfelmao.de5.net
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
 - type: vless
-  name: 🇸🇨_塞舌尔_youtube@资源分享师_60
-  server: 196.196.148.85
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-  sni: 5d0319t.nl7.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-    short-id: 361d0dd59c70516f
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_61
-  server: 213.183.41.31
-  port: 8459
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  udp: true
-  tls: true
-  servername: photos.plumstatic.com
-  sni: photos.plumstatic.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_62
-  server: 213.183.41.31
-  port: 8463
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  udp: true
-  tls: true
-  servername: share.plumstatic.com
-  sni: share.plumstatic.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-- type: vless
-  name: 🇸🇨_塞舌尔_youtube@资源分享师_63
-  server: 196.196.148.76
+  name: 🇳🇱_荷兰_youtube@资源分享师_23
+  server: 13.141.36.63
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  sni: 8a2e72t.nl20.h1clayd.shop
+  servername: 4935e4t.de25.h1clayd.click
+  sni: 4935e4t.de25.h1clayd.click
   skip-cert-verify: false
   client-fingerprint: firefox
   reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: 8d0d0679f42ffd98
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_67
+  name: 🇫🇮_芬兰_youtube@资源分享师_24
+  server: 31.77.138.211
+  port: 443
+  uuid: 55ba7b31-b0eb-4362-9c9b-fc53b0a53fab
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: fi3.setlocation.top
+  sni: fi3.setlocation.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: CfkGhr_sLpU9RJouAtTUnX1CpDTK6hRKEl01wMtN4Ro
+    short-id: ff67a6fea811a566
+- type: vless
+  name: youtube@资源分享师_25
+  server: quirivoo.ir
+  port: 2052
+  uuid: dc780059-8b89-42d1-94eb-1c1d1bbbdd2f
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: quirivoo.ir
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_26
+  server: 134.199.213.162
+  port: 443
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  udp: true
+  tls: true
+  servername: v9-eim.pages.dev
+  sni: v9-eim.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_27
+  server: 2.26.251.236
+  port: 443
+  uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: mental-deprivation.ru
+  sni: mental-deprivation.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+    short-id: 4ff31b18d1bd8227
+- type: vless
+  name: youtube@资源分享师_29
+  server: help1.digikala-aparat-zula.com
+  port: 443
+  uuid: 20e565e1-3858-40bf-94e8-4ec9624fc985
+  udp: true
+  tls: true
+  servername: wallweb8.pages.dev
+  sni: wallweb8.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wallweb8.pages.dev
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_30
+  server: 2.26.251.236
+  port: 443
+  uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: mental-deprivation.ru
+  sni: mental-deprivation.ru
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+    short-id: 4ff31b18d1bd8227
+- type: trojan
+  name: 🇫🇷_法国_youtube@资源分享师_31
+  server: 146.59.105.122
+  port: 443
+  password: zhs000666
+  udp: true
+  tls: true
+  servername: 666-4sd.pages.dev
+  sni: 666-4sd.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ts.hpc.tw
+    headers:
+      Host: 666-4sd.pages.dev
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_32
+  server: eu121.cdn77.icu
+  port: 443
+  uuid: 327487f5-8665-48df-9e76-f1bee6d16557
+  udp: true
+  tls: true
+  servername: 127.0.0.1
+  sni: 127.0.0.1
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: zYNnGVEkMFCUR_9NcYeaXfm9A_L-PP6iG2sIIST6S0M
+    short-id: 1ed136481e0ede74
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_33
+  server: jp2chat.xyy123.win
+  port: 443
+  uuid: 218345b7-3589-4c5e-9c6c-15a6c2de6895
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: blog.api.www.cloudflare.com
+  sni: blog.api.www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: I4sC7wO_OjKQcby3249aC1qGAmoMgHEFtRUvoLUy2yc
+    short-id: c92cbef726ee8169
+- type: vless
+  name: youtube@资源分享师_34
+  server: cf.090227.xyz
+  port: 443
+  uuid: 419032d7-2247-49c9-85c8-cc454b7c11d6
+  udp: true
+  tls: true
+  servername: tiffany-capability-very-apartments.trycloudflare.com
+  sni: tiffany-capability-very-apartments.trycloudflare.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl-419032d7
+    headers:
+      Host: tiffany-capability-very-apartments.trycloudflare.com
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_35
+  server: 172.66.0.230
+  port: 2083
+  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  udp: true
+  tls: true
+  servername: helloapps.cc.cd
+  sni: helloapps.cc.cd
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: helloapps.cc.cd
+- type: trojan
+  name: 🇺🇸_美国_youtube@资源分享师_36
+  server: ipfast.kingmna.com
+  port: 443
+  password: Z-jckziI1rW4yrUMorrv0Q
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: looazzboijji.global.ssl.fastly.net.
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_37
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  sni: aszbk-ru-78dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: qq
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_42
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  sni: aszbk-ru-78dc.my-fade.cloud
+  skip-cert-verify: false
+- type: vless
+  name: 🇵🇱_波兰_youtube@资源分享师_43
+  server: 201.58.178.197
+  port: 443
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: lesson4.schoolpizorbz.xyz
+  sni: lesson4.schoolpizorbz.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: EUuZAVtneL8O7MgjETmHvOyInaxqJu2RD6hiFQdDPwk
+    short-id: 0df067145606c0b0
+- type: vless
+  name: 🇫🇮_芬兰_youtube@资源分享师_44
+  server: 2.29.62.181
+  port: 443
+  uuid: b63bc3fe-8852-4ead-8d25-8d8d5bae79ae
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: api.steampowered.com
+  sni: api.steampowered.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 4hAezOnHPiz2LUH0NBpS7KmGVd7-AyOODfHWwyQ50kM
+    short-id: fdea6c48da968d75
+- type: vmess
+  name: 🇺🇸_美国_youtube@资源分享师_45
+  server: 172.245.106.236
+  port: 52080
+  uuid: 069b590d-895b-4707-bf71-7c204c3f6e77
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: down-cdn.dingtalk.com
+  sni: down-cdn.dingtalk.com
+  skip-cert-verify: false
+- type: vless
+  name: 🇮🇪_爱尔兰_youtube@资源分享师_46
+  server: 83.141.92.168
+  port: 443
+  uuid: a7595994-695d-484e-bfcb-e9fbb73cfa39
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: sladovna.russianpiwo.fun
+  sni: sladovna.russianpiwo.fun
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: kpQWnVk3fEJXfPGFsMerUoPV_ZqUJUJFRnF1FvKyhRY
+    short-id: 7a7d19880a9ee786
+- type: trojan
+  name: 🇺🇸_美国_youtube@资源分享师_47
+  server: ipfast.kingmna.com
+  port: 443
+  password: Z-jckziI1rW4yrUMorrv0Q
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: loosnsj5aboijji.global.ssl.fastly.net
+- type: vless
+  name: 🇫🇮_芬兰_youtube@资源分享师_48
+  server: 95.216.182.174
+  port: 443
+  uuid: dc8e0f03-beda-4101-84b4-1b6c84f6dbec
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: K5KIrQJZH83V1G9MUOYlNy24_4Ntg8U_ngt5p7_EMFc
+    short-id: 29b55f87
+- type: vless
+  name: 🇫🇷_法国_youtube@资源分享师_51
+  server: 13.140.156.31
+  port: 8443
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  udp: true
+  tls: true
+  servername: v9-eim.pages.dev
+  sni: v9-eim.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_52
+  server: de.losserver.live
+  port: 443
+  uuid: bab5032a-b457-45df-b4a3-d956e31c402c
+  udp: true
+  tls: true
+  servername: de.losserver.live
+  sni: de.losserver.live
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: IRvdF1XS_Tb7Kw9U3huKIbPPxOfRVEsGFPUllw1kCho
+    short-id: 7b
+- type: vless
+  name: 🇳🇱_荷兰_youtube@资源分享师_53
+  server: 144.31.203.145
+  port: 443
+  uuid: f4b08bf1-d9bd-4755-aa88-ba922282c608
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: nemicro543.aidating.am
+  sni: nemicro543.aidating.am
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: MAcch2LXcj3xo0ZZQIBvxS4GptpZ9ipzFNNn2BUa6mg
+    short-id: a54ec85c94547b17
+- type: vless
+  name: 🇦🇲_亚美尼亚_youtube@资源分享师_54
+  server: 91.192.158.104
+  port: 443
+  uuid: 0444647e-6388-4c4b-9847-1fcd5bc101ea
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: az-fi-01-c8iyj203.farmerly.cc
+  sni: az-fi-01-c8iyj203.farmerly.cc
+  skip-cert-verify: false
+  reality-opts:
+    public-key: 97CMGywXeHWMpnvLx59xcg6Pqb4_ZN7aqPyeaek8D2U
+    short-id: 0aeec6de7d3d1a15
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_55
+  server: 85.8.201.186
+  port: 443
+  uuid: 7aa77858-f235-0001-9434-7ab060848b17
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: cdn.mornismp.ru
+  sni: cdn.mornismp.ru
+  skip-cert-verify: false
+- type: ss
+  name: 🇩🇪_德国_youtube@资源分享师_56
+  server: 8.209.80.17
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: trojan
+  name: 🇺🇸_美国_youtube@资源分享师_57
+  server: ipfast.kingmna.com
+  port: 443
+  password: Z-jckziI1rW4yrUMorrv0Q
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: looaboi4jji.global.ssl.fastly.net.
+- type: vless
+  name: 🇮🇷_伊朗_youtube@资源分享师_58
+  server: logout.spacecdn.ir
+  port: 1926
+  uuid: 4fdf9cd1-b7cf-4989-9d3a-63e4efb2b4b3
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: login.zanjanphone.ir
+  sni: login.zanjanphone.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /user
+    headers:
+      Host: login.zanjanphone.ir
+- type: vless
+  name: 🇮🇳_印度_youtube@资源分享师_59
+  server: 147.93.171.8
+  port: 8443
+  uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
+  udp: true
+  tls: true
+  servername: 147-93-171-8.sslip.io
+  sni: 147-93-171-8.sslip.io
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /vpn-live
+    headers:
+      Host: 147-93-171-8.sslip.io
+- type: vless
+  name: 🇸🇬_新加坡_youtube@资源分享师_61
+  server: 43.170.8.95
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  sni: jp3.yohototo.top
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_62
+  server: 31.76.127.59
+  port: 443
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  udp: true
+  tls: true
+  servername: v9-eim.pages.dev
+  sni: v9-eim.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: youtube@资源分享师_64
+  server: 104.17.136.102
+  port: 2087
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  udp: true
+  tls: true
+  servername: rezanoori4295.pages.dev
+  sni: rezanoori4295.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rezanoori4295.pages.dev
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_65
+  server: 136.148.83.71
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  servername: wccfu-ru-79dc.my-fade.cloud
+  sni: wccfu-ru-79dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: qq
+- type: vless
+  name: youtube@资源分享师_66
+  server: 104.17.136.102
+  port: 2087
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rezanoori4295.pages.dev
+- type: trojan
+  name: 🇺🇸_美国_youtube@资源分享师_69
+  server: ipfast.kingmna.com
+  port: 443
+  password: Z-jckziI1rW4yrUMorrv0Q
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: looasaaa2boijji.global.ssl.fastly.net
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_70
+  server: 85.8.201.186
+  port: 443
+  uuid: 7aa77858-f235-0004-9434-7ab060848b17
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: cdn.mornismp.ru
+  sni: cdn.mornismp.ru
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+- type: ss
+  name: 🇩🇪_德国_youtube@资源分享师_71
+  server: 47.254.167.157
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: youtube@资源分享师_74
+  server: 104.17.136.102
+  port: 2087
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  udp: true
+  tls: true
+  servername: rezanoori4295.pages.dev
+  sni: rezanoori4295.pages.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_76
+  server: 136.148.83.71
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  servername: wccfu-ru-79dc.my-fade.cloud
+  sni: wccfu-ru-79dc.my-fade.cloud
+  skip-cert-verify: false
+- type: ss
+  name: 🇩🇪_德国_youtube@资源分享师_77
+  server: 8.211.8.225
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: hysteria2
+  name: 🇦🇪_阿拉伯联合酋长国_youtube@资源分享师_78
+  server: uk-tube-01.stre4m.net
+  port: 13337
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  udp: true
+  servername: mother-earth.fyi
+  sni: mother-earth.fyi
+  skip-cert-verify: false
+- type: vless
+  name: 🇨🇿_捷克_youtube@资源分享师_79
+  server: 195.133.76.254
+  port: 443
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+  udp: true
+  tls: true
+  servername: v9-eim.pages.dev
+  sni: v9-eim.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- type: vless
+  name: 🇫🇮_芬兰_youtube@资源分享师_80
+  server: lesson13.schoolpizorbz.xyz
+  port: 443
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: lesson13.schoolpizorbz.xyz
+  sni: lesson13.schoolpizorbz.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: luf3doVXhkblZF7R3E5m1hc_e6dYmEn2rrgoGBvQaEU
+    short-id: 68bf8009e520f8da
+- type: ss
+  name: 🇩🇪_德国_youtube@资源分享师_81
+  server: 47.254.128.109
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: ss
+  name: 🇺🇸_美国_youtube@资源分享师_82
+  server: waic.pro.main.sys-metric-report.com
+  port: 28014
+  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
+  cipher: chacha20-ietf-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: trojan
+  name: 🇺🇸_美国_youtube@资源分享师_83
+  server: ipfast.kingmna.com
+  port: 443
+  password: Z-jckziI1rW4yrUMorrv0Q
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  sni: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: looasaaaboijji.global.ssl.fastly.net.
+- type: vless
+  name: 🇩🇴_多米尼加共和国_youtube@资源分享师_84
+  server: 181.36.229.212
+  port: 443
+  uuid: 4859c235-2530-4062-9a0b-ea859cbbf861
+  udp: true
+  tls: true
+  servername: 1.proxy2.us.ci.
+  sni: 1.proxy2.us.ci.
+  skip-cert-verify: false
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 1.proxy2.us.ci.
+- type: vless
+  name: 🇹🇼_台湾_youtube@资源分享师_85
+  server: 154.40.61.186
+  port: 8443
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  udp: true
+  tls: true
+  servername: senflarelink-node-wj1gsa.pages.dev
+  sni: senflarelink-node-wj1gsa.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /flow=fp=chrome
+    headers:
+      Host: senflarelink-node-wj1gsa.pages.dev
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_86
+  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  port: 443
+  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
+  udp: true
+  tls: true
+  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  sni: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ffad70ffdfc3bcda
+    headers:
+      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_87
+  server: 85.8.201.186
+  port: 443
+  uuid: 7aa77858-f235-000c-9434-7ab060848b17
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: cdn.mornismp.ru
+  sni: cdn.mornismp.ru
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_88
   server: 178.248.236.229
   port: 443
   uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
@@ -476,66 +948,123 @@ proxies:
     public-key: _3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0
     short-id: d05a120d3506d2cc
 - type: vless
-  name: 🇺🇸_美国_youtube@资源分享师_69
-  server: 162.35.101.177
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_89
+  server: 196.196.148.177
   port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  udp: true
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-  sni: 0592efg.us8.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: edge
-  reality-opts:
-    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
-    short-id: bd8f712209a9c283
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 99f2107b03f8
-- type: vmess
-  name: 🇸🇪_瑞典_youtube@资源分享师_71
-  server: 13.51.184.77
-  port: 8086
-  uuid: f970052a-8381-40c7-875e-ef0892e01b7b
-  cipher: aes-128-gcm
-  alterId: 0
-  udp: true
-  tls: true
-  servername: 13.51.184.77
-  sni: 13.51.184.77
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /xjf3ry
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_72
-  server: 213.183.45.23
-  port: 8454
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  udp: true
-  tls: true
-  servername: store.plumstatic.com
-  sni: store.plumstatic.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-- type: vless
-  name: 🇭🇰_香港_youtube@资源分享师_73
-  server: 170.168.32.125
-  port: 443
-  uuid: 148917bd-0b37-42b8-98f4-aa94ca73e75a
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: travel.yandex.ru
-  sni: travel.yandex.ru
+  servername: 4935e4t.de25.h1clayd.click
+  sni: 4935e4t.de25.h1clayd.click
   skip-cert-verify: false
+  client-fingerprint: firefox
   reality-opts:
-    public-key: tp7awfnKLbhIDkdYlT7Avf-SfUwt7ncX5oyWS5wQmR0
-    short-id: 6d
+    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
+    short-id: 6976d670818644cc
 - type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_74
+  name: youtube@资源分享师_90
+  server: 104.18.125.108
+  port: 8443
+  uuid: 63daab7f-4ae1-4d19-af87-d2f515dd8e6a
+  udp: true
+  tls: true
+  servername: a1038.o7c4pzv.com
+  sni: a1038.o7c4pzv.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 027d3bb2e0c1cbe6d75214da2ded03f8
+- type: vmess
+  name: 🇮🇷_伊朗_youtube@资源分享师_92
+  server: Ir.wbzo.ir
+  port: 2070
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_93
+  server: 136.148.83.70
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  servername: aszbk-ru-78dc.my-fade.cloud
+  sni: aszbk-ru-78dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- type: vless
+  name: youtube@资源分享师_94
+  server: cdn.8211992.xyz
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  servername: mao.kipfelmao.de5.net
+  sni: mao.kipfelmao.de5.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v1/guests/profiles/5de14443985f/
+    headers:
+      Host: mao.kipfelmao.de5.net
+- type: ss
+  name: 🇮🇷_伊朗_youtube@资源分享师_96
+  server: 81.12.35.242
+  port: 8443
+  password: kNek+POwGgn5qhhcIOxN+w==:K7GK+Epcy2jRRMi3BPXTOQ==
+  cipher: 2022-blake3-aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: youtube@资源分享师_99
+  server: 104.18.42.98
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  sni: jp3.yohototo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- type: ss
+  name: 🇮🇷_伊朗_youtube@资源分享师_100
+  server: 81.12.33.27
+  port: 8443
+  password: LD9xA0I5NrE/aPKvmXN0kQ==:K7GK+Epcy2jRRMi3BPXTOQ==
+  cipher: 2022-blake3-aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_101
+  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  port: 443
+  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
+  udp: true
+  tls: true
+  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  sni: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ffad70ffdfc3bcda
+    headers:
+      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_105
   server: 153.56.231.73
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
@@ -552,75 +1081,184 @@ proxies:
   grpc-opts:
     grpc-service-name: 204adda7e3da
 - type: vless
-  name: 🇳🇱_荷兰_youtube@资源分享师_75
-  server: 717252g.nl8.h1clayd.click
+  name: youtube@资源分享师_106
+  server: q.bn-02.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: q.bn-02.kdns.fr
+  sni: q.bn-02.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
+- type: vless
+  name: 🇮🇷_伊朗_youtube@资源分享师_110
+  server: ns2.irts.lol
+  port: 443
+  uuid: ff1906a5-a446-44e4-8e72-4e2d61775fa0
+  udp: true
+  tls: true
+  servername: ns2.irts.lol
+  sni: ns2.irts.lol
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- type: vmess
+  name: 🇮🇷_伊朗_youtube@资源分享师_111
+  server: Ir.wbzo.ir
+  port: 2080
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: youtube@资源分享师_113
+  server: 104.18.3.64
+  port: 443
+  uuid: 8548b395-5ddd-43b4-886a-9473e43605da
+  udp: true
+  tls: true
+  servername: a1257.kqpgfib.store
+  sni: a1257.kqpgfib.store
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 4855af74b778699bbf6721ab2019229d280f1281
+- type: vless
+  name: 🇺🇸_美国_youtube@资源分享师_114
+  server: 162.35.101.177
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
   tls: true
-  servername: 717252g.nl8.h1clayd.click
-  sni: 717252g.nl8.h1clayd.click
+  servername: 0592efg.us8.h1clayd.click
+  sni: 0592efg.us8.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: bd8f712209a9c283
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+- type: vless
+  name: 🇳🇱_荷兰_youtube@资源分享师_115
+  server: 13.141.36.10
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 5d0319t.nl7.h1clayd.click
+  sni: 5d0319t.nl7.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+- type: vless
+  name: youtube@资源分享师_116
+  server: xx.rr-0h.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: xx.rr-0h.kdns.fr
+  sni: xx.rr-0h.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
+- type: ss
+  name: 🇮🇷_伊朗_youtube@资源分享师_117
+  server: 5.57.38.203
+  port: 8080
+  password: 2h2sVz3hkzbMykbD9hduOA==:K7GK+Epcy2jRRMi3BPXTOQ==
+  cipher: 2022-blake3-aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- type: vless
+  name: 🇳🇱_荷兰_youtube@资源分享师_118
+  server: 13.141.36.10
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 15b171g.nl7.h1clayd.click
+  sni: 15b171g.nl7.h1clayd.click
   skip-cert-verify: false
   client-fingerprint: firefox
   reality-opts:
-    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
-    short-id: d3bd772514c87d28
+    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
+    short-id: 50a749f0eccb628c
   network: grpc
   grpc-opts:
-    grpc-service-name: 204adda7e3da
+    grpc-service-name: 5b79e8a94241
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_76
-  server: 213.183.45.23
-  port: 8444
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  name: youtube@资源分享师_119
+  server: 444.vbp.ccwu.cc
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
   udp: true
   tls: true
-  servername: media.plumstatic.com
-  sni: media.plumstatic.com
+  servername: 444.vbp.ccwu.cc
+  sni: 444.vbp.ccwu.cc
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_77
-  server: 213.183.45.23
-  port: 8454
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  name: youtube@资源分享师_120
+  server: qqqqqqqq.bn-02.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
   udp: true
   tls: true
-  servername: store.plumstatic.com
-  sni: store.plumstatic.com
+  servername: qqqqqqqq.bn-02.kdns.fr
+  sni: qqqqqqqq.bn-02.kdns.fr
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_78
-  server: 165.231.157.126
-  port: 8443
-  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  flow: xtls-rprx-vision
+  name: youtube@资源分享师_124
+  server: e.y9-00.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
   udp: true
   tls: true
-  servername: api-6b04608f.adhil.uk
-  sni: api-6b04608f.adhil.uk
+  servername: e.y9-00.kdns.fr
+  sni: e.y9-00.kdns.fr
   skip-cert-verify: false
-  client-fingerprint: safari
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_79
-  server: 165.231.157.126
-  port: 8443
-  uuid: 0173d52e-8e1b-4681-831e-11529677b72f
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: api-6b04608f.adhil.uk
-  sni: api-6b04608f.adhil.uk
-  skip-cert-verify: false
-- type: vless
-  name: 🇸🇨_塞舌尔_youtube@资源分享师_82
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_125
   server: 196.196.149.81
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
@@ -635,17 +1273,7 @@ proxies:
     public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
     short-id: 42426c882c5fcd41
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_83
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-  sni: wccfu-ru-79dc.my-fade.cloud
-  skip-cert-verify: false
-- type: vless
-  name: 🇸🇨_塞舌尔_youtube@资源分享师_84
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_127
   server: 196.199.122.2
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
@@ -660,585 +1288,83 @@ proxies:
     public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
     short-id: 42426c882c5fcd41
 - type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_86
-  server: 136.148.83.70
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_128
+  server: 196.199.122.2
   port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  servername: aszbk-ru-78dc.my-fade.cloud
-  sni: aszbk-ru-78dc.my-fade.cloud
-  skip-cert-verify: false
-  client-fingerprint: qq
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_87
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-  sni: wccfu-ru-79dc.my-fade.cloud
-  skip-cert-verify: false
-  client-fingerprint: qq
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_91
-  server: 47.74.41.139
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_92
-  server: 47.245.32.129
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_93
-  server: sclass-c2.catcat321.com
-  port: 20017
-  password: 40a8a71b-91d3-4b63-9907-5e12ad2259c1
-  udp: true
-  tls: true
-  servername: hk.catxstar.com
-  sni: hk.catxstar.com
-  skip-cert-verify: false
-- type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_94
-  server: 2.26.251.236
-  port: 443
-  uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   flow: xtls-rprx-vision
   udp: true
   tls: true
-  servername: mental-deprivation.ru
-  sni: mental-deprivation.ru
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
-    short-id: 4ff31b18d1bd8227
-- type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_95
-  server: 2.26.251.236
-  port: 443
-  uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: mental-deprivation.ru
-  sni: mental-deprivation.ru
-  skip-cert-verify: false
-  reality-opts:
-    public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
-    short-id: 4ff31b18d1bd8227
-- type: ss
-  name: 🇰🇷_韩国_youtube@资源分享师_96
-  server: 211.233.33.228
-  port: 8388
-  password: qpowi_vip_tunnel_2026_secure
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇯🇵_日本_youtube@资源分享师_99
-  server: 149.28.29.156
-  port: 443
-  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
-  udp: true
-  tls: true
-  servername: itunes.apple.com
-  sni: itunes.apple.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: vless
-  name: 🇸🇬_新加坡_youtube@资源分享师_100
-  server: 139.180.221.53
-  port: 443
-  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
-  udp: true
-  tls: true
-  servername: itunes.apple.com
-  sni: itunes.apple.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_04
-  server: 8.211.129.80
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_08
-  server: 47.245.42.226
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_09
-  server: 47.245.40.193
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_11
-  server: 47.74.24.29
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_15
-  server: 47.74.49.154
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: hysteria2
-  name: 🇰🇷_韩国_youtube@资源分享师_17
-  server: www.ddsos.cc
-  port: 7788
-  password: c8aa4ba6a243ddfdeb67515aa849624b
-  udp: true
-  servername: www.ddsos.cc
-  sni: www.ddsos.cc
-  skip-cert-verify: false
-- type: vmess
-  name: 🇭🇰_香港_youtube@资源分享师_18
-  server: 85.137.247.54
-  port: 18565
-  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_20
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40000
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_21
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 22090
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_22
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40012
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_23
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 22061
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_24
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 22044
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_27
-  server: 186.241.106.5
-  port: 443
-  password: qpbw_r_Ykr5EZTGKX3mNZSVTj9liEAL3
-  udp: true
-  tls: true
-  servername: 186.241.106.5
-  sni: 186.241.106.5
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_28
-  server: 186.241.106.5
-  port: 443
-  password: umz7fMUCXmOFOA24i5sohCXYrmGExGOq
-  udp: true
-  tls: true
-  servername: 186.241.106.5
-  sni: 186.241.106.5
-  skip-cert-verify: false
-- type: hysteria2
-  name: 🇰🇷_韩国_youtube@资源分享师_32
-  server: 13.124.238.118
-  port: 443
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  udp: true
-  servername: www.bing.com
-  sni: www.bing.com
-  skip-cert-verify: false
-  fingerprint: 896186feb20cb7403187a45ff3bd5ddc8bfbdd419d779d55d786189d36731a69
-- type: vmess
-  name: 🇸🇬_新加坡_youtube@资源分享师_33
-  server: 8.222.172.146
-  port: 54327
-  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /pages
-- type: vless
-  name: 🇩🇪_德国_youtube@资源分享师_35
-  server: 90819ce5a2221d4e.1f6.ir
-  port: 8193
-  uuid: 1b0052b8-a7ee-4f63-91fe-c35d4cf1f188
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_37
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40027
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vmess
-  name: 🇬🇧_英国_youtube@资源分享师_38
-  server: yg2.needss.top
-  port: 12007
-  uuid: 82fe4bde-7d9c-4106-8398-078697582192
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- type: vless
-  name: 🇳🇱_荷兰_youtube@资源分享师_43
-  server: 147.45.61.144
-  port: 443
-  uuid: 04812b68-47ad-48ee-b96d-ab9127679634
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: s2.frenchymyrsep.click
-  sni: s2.frenchymyrsep.click
-  skip-cert-verify: false
-  reality-opts:
-    public-key: tmiOsPsVgiWU7usQWetCpVdEp3ZTWl9tPY-r399JdCs
-    short-id: b725584749527b07
-- type: vmess
-  name: 🇺🇸_美国_youtube@资源分享师_45
-  server: 172.245.106.236
-  port: 23567
-  uuid: 94b804fa-f7f0-4105-9544-ec667c876bee
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: false
-  servername: down-cdn.dingtalk.com
-  sni: down-cdn.dingtalk.com
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_46
-  server: sclass-01.catcat321.com
-  port: 20186
-  password: b179b8a4-9a98-44a0-a1f1-65b8e8cb20a9
-  udp: true
-  tls: true
-  servername: hk.catxstar.com
-  sni: hk.catxstar.com
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_48
-  server: 202.50.253.27
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_49
-  server: 47.91.16.50
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_51
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40032
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_52
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40031
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_53
-  server: 202.50.253.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_54
-  server: 202.50.253.99
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_56
-  server: 202.50.253.81
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_57
-  server: 202.50.253.90
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_58
-  server: 202.50.253.45
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_59
-  server: 45.150.37.169
-  port: 443
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: rumicro641.richhoodfoc.com
-  sni: rumicro641.richhoodfoc.com
+  servername: 7aa271t.es1.h1clayd.click
+  sni: 7aa271t.es1.h1clayd.click
   skip-cert-verify: false
   client-fingerprint: firefox
   reality-opts:
-    public-key: 2GYWewnpSKVqp2AXm1hEZ-av8iApLPa62V7rxpxt1SE
-    short-id: b9bb317e9c9e2627
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_60
-  server: 202.50.253.54
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_62
-  server: 202.50.253.63
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: 42426c882c5fcd41
 - type: vless
-  name: youtube@资源分享师_68
-  server: 104.18.3.64
+  name: youtube@资源分享师_132
+  server: 104.18.153.10
   port: 443
-  uuid: 96f4dd70-066c-4788-962d-d74761ca38cc
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
-  servername: a1149.yanbckh.biz
-  sni: a1149.yanbckh.biz
+  servername: jp3.yohototo.top
+  sni: jp3.yohototo.top
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_c274a5723f947b6b861df43c
-- type: ss
-  name: 🇮🇹_意大利_youtube@资源分享师_70
-  server: 202.50.253.36
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: youtube@资源分享师_72
-  server: ws.dhafhdtjdti.site
-  port: 2053
-  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
-  udp: true
-  tls: true
-  servername: ws.dhafhdtjdti.site
-  sni: ws.dhafhdtjdti.site
-  skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - type: vless
-  name: youtube@资源分享师_73
-  server: 104.18.3.64
+  name: youtube@资源分享师_133
+  server: 172.64.152.19
   port: 443
-  uuid: 74d4f00b-df30-4015-8223-e2ba5e67a196
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
-  servername: a1148.yanbckh.biz
-  sni: a1148.yanbckh.biz
+  servername: jp3.yohototo.top
+  sni: jp3.yohototo.top
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc_c8b2f1197faf56e42ce4f63d
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - type: vless
-  name: youtube@资源分享师_74
-  server: 104.18.12.225
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_134
+  server: 196.196.148.85
   port: 443
-  uuid: e359a619-0ba6-495b-97f1-746475c8e215
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
   tls: true
-  servername: a1078.o7c4pzv.com
-  sni: a1078.o7c4pzv.com
+  servername: 5d0319t.nl7.h1clayd.click
+  sni: 5d0319t.nl7.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+- type: vless
+  name: youtube@资源分享师_136
+  server: aaa.333333331.xyz
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: aaa.333333331.xyz
+  sni: aaa.333333331.xyz
   skip-cert-verify: false
   alpn:
   - h2
+  - http/1.1
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
-    grpc-service-name: zp1078grpc
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_75
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 21193
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_77
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 21191
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_79
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 21196
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
 - type: vless
-  name: youtube@资源分享师_81
-  server: 104.18.3.64
-  port: 443
-  uuid: 85161972-fbc0-4c64-b350-bcc41a9ee4da
-  udp: true
-  tls: true
-  servername: a1258.kmgikch.com
-  sni: a1258.kmgikch.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 36e4614ce460f1105d274cc254cb721aad9b108d
-- type: vless
-  name: youtube@资源分享师_82
-  server: 3x-sub.linzhonghong.com
-  port: 443
-  uuid: 0a4f1c90-a632-4c69-a8f1-9ebf9acaae71
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws7f3k9x2q8m
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_83
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 35190
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇺🇸_美国_youtube@资源分享师_84
+  name: 🇺🇸_美国_youtube@资源分享师_137
   server: 162.35.101.177
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
@@ -1254,282 +1380,129 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 99f2107b03f8
-- type: vmess
-  name: youtube@资源分享师_89
-  server: US032020.ssgreen.org
-  port: 443
-  uuid: 25e53ac3-1737-48c0-b92c-10d012af52f5
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  servername: US032020.ssgreen.org
-  sni: US032020.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: US032020.ssgreen.org
 - type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_90
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 35038
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vmess
-  name: youtube@资源分享师_93
-  server: US122205.ssgreen.org
-  port: 443
-  uuid: f8e18eb1-e428-486e-8613-660549745e6f
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  servername: US122205.ssgreen.org
-  sni: US122205.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: US122205.ssgreen.org
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_94
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40040
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
+  name: 🇮🇷_伊朗_youtube@资源分享师_139
+  server: ir.wbzo.ir
+  port: 2060
+  password: pmZmPZcbrauTSbfdc6-RLIaR_F7bW3H1
+  cipher: chacha20-ietf-poly1305
   udp: true
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: youtube@资源分享师_95
-  server: 104.18.12.225
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_144
+  server: 196.245.52.183
   port: 443
-  uuid: 48bec683-7bcf-44e9-9abb-4d287fd1c752
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
   tls: true
-  servername: a1015.afl7t8f.com
-  sni: a1015.afl7t8f.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: f90349a7ff1fc988bf3f07654ba096e4
-- type: vless
-  name: youtube@资源分享师_97
-  server: 104.18.125.108
-  port: 8443
-  uuid: 63daab7f-4ae1-4d19-af87-d2f515dd8e6a
-  udp: true
-  tls: true
-  servername: a1038.o7c4pzv.com
-  sni: a1038.o7c4pzv.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 027d3bb2e0c1cbe6d75214da2ded03f8
-- type: vless
-  name: youtube@资源分享师_98
-  server: 104.16.119.58
-  port: 443
-  uuid: e2480514-5bb7-4ca8-b8cd-727f261b3db0
-  udp: true
-  tls: true
-  servername: a1275.ve8nzuk.com
-  sni: a1275.ve8nzuk.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: e494515feb1b2f31a3f17d429354949a574fbeee
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_99_2
-  server: 47.74.18.249
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇯🇵_日本_youtube@资源分享师_103
-  server: 47.245.54.15
-  port: 5555
-  password: '123456'
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_105
-  server: 176.114.95.245
-  port: 443
-  uuid: 9a591702-24c7-4abf-9f14-ac59438a64e6
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_106
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 35194
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_107
-  server: 136.148.83.70
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  servername: aszbk-ru-78dc.my-fade.cloud
-  sni: aszbk-ru-78dc.my-fade.cloud
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_108
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 22084
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: vless
-  name: youtube@资源分享师_111
-  server: 104.16.119.58
-  port: 8443
-  uuid: f9c4c29f-b018-431b-b9c8-444b59fffe8f
-  udp: true
-  tls: true
-  servername: a1029.afl7t8f.com
-  sni: a1029.afl7t8f.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: c42d2c062a57c167e74311affb748902
-- type: vless
-  name: youtube@资源分享师_112
-  server: 104.18.12.225
-  port: 2087
-  uuid: c6771b7c-2ea6-4ced-afb5-f135cf2fd585
-  udp: true
-  tls: true
-  servername: a1040.o7c4pzv.com
-  sni: a1040.o7c4pzv.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: fec91ad0c3dfc86bfc78ba69892385f9
-- type: vmess
-  name: youtube@资源分享师_113
-  server: JP032011.ssgreen.org
-  port: 443
-  uuid: 4b9dc0c5-388d-45c5-9ad3-a91db984784e
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-- type: vless
-  name: 🇷🇺_俄罗斯_youtube@资源分享师_115
-  server: 84.54.44.117
-  port: 443
-  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
-  flow: xtls-rprx-vision
-  udp: true
-  tls: true
-  servername: rumicro642.richhoodfoc.com
-  sni: rumicro642.richhoodfoc.com
+  servername: 15b171g.nl7.h1clayd.click
+  sni: 15b171g.nl7.h1clayd.click
   skip-cert-verify: false
   client-fingerprint: firefox
   reality-opts:
-    public-key: fPvZxeP0GErdI22fbEAqbMaz-QMumNIDzBNgKZmRsWY
-    short-id: a7b12f3265f97f4a
-- type: vmess
-  name: youtube@资源分享师_116
-  server: US032014.ssgreen.org
-  port: 443
-  uuid: a707b82c-2e89-414f-902a-e63a496c5ed7
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
+    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
+    short-id: 50a749f0eccb628c
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 5b79e8a94241
 - type: vless
-  name: youtube@资源分享师_123
-  server: 104.18.12.225
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_145
+  server: 196.245.52.178
   port: 443
-  uuid: e9db00d0-e30d-4e42-ac13-815c95374fa1
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
   tls: true
-  servername: a1178.o7c4pzv.com
-  sni: a1178.o7c4pzv.com
+  servername: 15b171g.nl7.h1clayd.click
+  sni: 15b171g.nl7.h1clayd.click
   skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
+    short-id: 50a749f0eccb628c
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 5b79e8a94241
+- type: vless
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_148
+  server: 196.196.148.76
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: 8a2e72t.nl20.h1clayd.shop
+  sni: 8a2e72t.nl20.h1clayd.shop
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
+- type: vless
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_149
+  server: 196.245.52.187
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  sni: 04535dt.us8.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_153
+  server: 2.26.251.236
+  port: 443
+  uuid: c16e8cdb-65dd-4049-bc65-14c051b8a6c6
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: mental-deprivation.ru
+  sni: mental-deprivation.ru
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4
+    short-id: 4ff31b18d1bd8227
+- type: vless
+  name: youtube@资源分享师_155
+  server: eeeeeee.y9-00.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: eeeeeee.y9-00.kdns.fr
+  sni: eeeeeee.y9-00.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
-    grpc-service-name: f0790a536033e1e4d0fa15ef7be34f06
-- type: vmess
-  name: youtube@资源分享师_124
-  server: JP032010.ssgreen.org
-  port: 443
-  uuid: f9a1ee44-21b3-4d0e-81b6-265fa2f3ba57
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-- type: vmess
-  name: youtube@资源分享师_125
-  server: JP032011.ssgreen.org
-  port: 443
-  uuid: 4b9dc0c5-388d-45c5-9ad3-a91db984784e
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  servername: JP032011.ssgreen.org
-  sni: JP032011.ssgreen.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: JP032011.ssgreen.org
-- type: vmess
-  name: youtube@资源分享师_126
-  server: JP032012.ssgreen.org
-  port: 443
-  uuid: b033f4ec-c3d7-4d84-8c94-992276a64bfb
-  cipher: auto
-  alterId: 0
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
 - type: vless
-  name: 🇸🇨_塞舌尔_youtube@资源分享师_127
+  name: 🇩🇪_德国_youtube@资源分享师_157
+  server: 153.56.230.6
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  udp: true
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  sni: 0592efg.us8.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: edge
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: bd8f712209a9c283
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+- type: vless
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_158
   server: 196.196.149.80
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
@@ -1543,112 +1516,152 @@ proxies:
   reality-opts:
     public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
     short-id: 42426c882c5fcd41
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_129
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 21195
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_130
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 22069
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_132
-  server: sclass-01.catcat321.com
-  port: 20123
-  password: 40a8a71b-91d3-4b63-9907-5e12ad2259c1
-  udp: true
-  tls: true
-  servername: hk.catxstar.com
-  sni: hk.catxstar.com
-  skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国_youtube@资源分享师_133
-  server: ipfast.kingmna.com
+- type: vless
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_165
+  server: 196.196.148.85
   port: 443
-  password: 1sUm9iYpsjLCOC9THsL9cg
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
   tls: true
-  servername: cdn.akamai.steamstatic.com
-  sni: cdn.akamai.steamstatic.com
+  servername: 5d0319t.nl7.h1clayd.click
+  sni: 5d0319t.nl7.h1clayd.click
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
-    headers:
-      Host: dekoto845.global.ssl.fastly.net.
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+- type: vless
+  name: 🇸🇨_塞舌尔_youtube@资源分享师_170
+  server: 196.196.148.90
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: 7aa271t.es9.h1clayd.click
+  sni: 7aa271t.es9.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: 42426c882c5fcd41
 - type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_135
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40022
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
+  name: 🇮🇹_意大利_youtube@资源分享师_172
+  server: 202.50.253.63
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
   udp: true
   tls: false
   skip-cert-verify: false
 - type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_137
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 40030
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
+  name: 🇮🇹_意大利_youtube@资源分享师_173
+  server: 202.50.253.72
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
   udp: true
   tls: false
   skip-cert-verify: false
 - type: vless
-  name: youtube@资源分享师_138
-  server: 104.18.41.183
-  port: 8443
-  uuid: 3a8739a5-468b-4980-ae9f-1d2407f80a59
+  name: youtube@资源分享师_174
+  server: eee.y9-00.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
   udp: true
   tls: true
-  servername: a1076.yanbckh.biz
-  sni: a1076.yanbckh.biz
+  servername: eee.y9-00.kdns.fr
+  sni: eee.y9-00.kdns.fr
   skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
-    grpc-service-name: 76b4f807ac647f03846294e62beb5c98
-- type: vmess
-  name: youtube@资源分享师_144
-  server: US122202.ssgreen.org
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
+- type: vless
+  name: youtube@资源分享师_07
+  server: qqqqqqq.bn-02.kdns.fr
   port: 443
-  uuid: 74061c57-530d-4534-bcaa-e8449df277f6
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: qqqqqqq.bn-02.kdns.fr
+  sni: qqqqqqq.bn-02.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
+- type: hysteria2
+  name: 🇹🇷_土耳其_youtube@资源分享师_09
+  server: 38.60.255.241
+  port: 26001
+  password: vzZRZ3AgT04LZuKO
+  udp: true
+  servername: tk4.czzhkractqqakfzdmrgd.cc
+  sni: tk4.czzhkractqqakfzdmrgd.cc
+  skip-cert-verify: false
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_12
+  server: gfnpy.linuxlh.xin
+  port: 16645
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
   cipher: auto
   alterId: 0
   udp: true
-  tls: true
-  servername: US122202.ssgreen.org
-  sni: US122202.ssgreen.org
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /wes
+    path: /
     headers:
-      Host: US122202.ssgreen.org
-- type: ss
-  name: 🇺🇸_美国_youtube@资源分享师_145
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  port: 35031
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  cipher: aes-128-gcm
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: vless
+  name: youtube@资源分享师_13
+  server: a.333333331.xyz
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
   udp: true
-  tls: false
+  tls: true
+  servername: a.333333331.xyz
+  sni: a.333333331.xyz
   skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
+- type: vless
+  name: youtube@资源分享师_15
+  server: xxxxx.rr-0h.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: xxxxx.rr-0h.kdns.fr
+  sni: xxxxx.rr-0h.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
 - type: vmess
-  name: 🇺🇸_美国_youtube@资源分享师_155
+  name: 🇺🇸_美国_youtube@资源分享师_22
   server: 172.245.106.236
-  port: 52080
-  uuid: 069b590d-895b-4707-bf71-7c204c3f6e77
+  port: 23567
+  uuid: 94b804fa-f7f0-4105-9544-ec667c876bee
   cipher: auto
   alterId: 0
   udp: true
@@ -1656,3 +1669,343 @@ proxies:
   servername: down-cdn.dingtalk.com
   sni: down-cdn.dingtalk.com
   skip-cert-verify: false
+- type: vless
+  name: 🇩🇪_德国_youtube@资源分享师_29
+  server: 109.176.202.177
+  port: 443
+  uuid: b92fa8ab-5a4b-4202-8e2d-af8e8b332193
+  udp: true
+  tls: true
+  servername: delivery.mp.microsoft.com
+  sni: delivery.mp.microsoft.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 4YuPm6_B_Aa9Um70LtKFnVfA_F8uiwwmXChE_pyXjX8
+    short-id: ec77cd113fc57140
+- type: hysteria2
+  name: 🇺🇸_美国_youtube@资源分享师_31
+  server: d2fhy.dgswqnz18.dasdadenakgdagdakadawadsjk.com
+  port: 17218
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: d2fhy.dgswqnz18.dasdadenakgdagdakadawadsjk.com
+  sni: d2fhy.dgswqnz18.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: vless
+  name: youtube@资源分享师_75
+  server: eeeeee.y9-00.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: eeeeee.y9-00.kdns.fr
+  sni: eeeeee.y9-00.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
+- type: vless
+  name: youtube@资源分享师_77
+  server: 104.18.3.64
+  port: 443
+  uuid: 5d3048ae-a31f-45f9-9313-87a93bdc0a3f
+  udp: true
+  tls: true
+  servername: a1254.kqpgfib.store
+  sni: a1254.kqpgfib.store
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: f0d0ff829dc5cf43b3294aa3000e60c044d8fc3d
+- type: hysteria2
+  name: 🇺🇸_美国_youtube@资源分享师_92
+  server: dnmgwfhy.dgswqnz3.dasdadenakgdagdakadawadsjk.com
+  port: 17203
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: dnmgwfhy.dgswqnz3.dasdadenakgdagdakadawadsjk.com
+  sni: dnmgwfhy.dgswqnz3.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: vless
+  name: youtube@资源分享师_98
+  server: qqq.bn-02.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: qqq.bn-02.kdns.fr
+  sni: qqq.bn-02.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: fSCiofYozRzMECOJeMxhaZih50
+- type: vless
+  name: youtube@资源分享师_106_2
+  server: ssssss.qw14.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: ssssss.qw14.kdns.fr
+  sni: ssssss.qw14.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
+- type: vless
+  name: youtube@资源分享师_107
+  server: q.bn-02.kdns.fr
+  port: 443
+  uuid: 467277d6-839f-42d0-8916-f5494524b68f
+  udp: true
+  tls: true
+  servername: q.bn-02.kdns.fr
+  sni: q.bn-02.kdns.fr
+  skip-cert-verify: false
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Au6BODfCe2HoXwvO6xWTq0DdTogJXY
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_118
+  server: gfnpy.linuxlh.xin
+  port: 16632
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_121
+  server: umi2o.linuxlh.xin
+  port: 16645
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_123
+  server: f2hr1.linuxlh.xin
+  port: 16632
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: vless
+  name: 🇷🇺_俄罗斯_youtube@资源分享师_128
+  server: bookend.filnex.baby
+  port: 443
+  uuid: 749b1c56-e658-4bf5-94bd-5c3286a4aed1
+  udp: true
+  tls: true
+  servername: ferncrest.gerqix.online
+  sni: ferncrest.gerqix.online
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/de1/stream
+    headers:
+      Host: bookend.filnex.baby
+- type: hysteria2
+  name: 🇺🇸_美国_youtube@资源分享师_130
+  server: dnmgwfhy.dgswqnz14.dasdadenakgdagdakadawadsjk.com
+  port: 17214
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: dnmgwfhy.dgswqnz14.dasdadenakgdagdakadawadsjk.com
+  sni: dnmgwfhy.dgswqnz14.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: vless
+  name: 🇸🇬_新加坡_youtube@资源分享师_131
+  server: ddggsdafast.dronzed8.dasdadenakgdagdakadawadsjk.com
+  port: 18308
+  uuid: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzYh_L1wuKzmAKFUd77OaqKhvHl2UexMcuyb3rhE4EY
+    short-id: c6a59ae6
+- type: hysteria2
+  name: 🇺🇸_美国_youtube@资源分享师_133
+  server: dnmgwfhy.dgswqnz13.dasdadenakgdagdakadawadsjk.com
+  port: 17213
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: dnmgwfhy.dgswqnz13.dasdadenakgdagdakadawadsjk.com
+  sni: dnmgwfhy.dgswqnz13.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_134
+  server: umi2o.linuxlh.xin
+  port: 16648
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: hysteria2
+  name: 🇸🇬_新加坡_youtube@资源分享师_135
+  server: 18.142.158.10
+  port: 56001
+  password: dcADPkUXhbzRMhwp
+  udp: true
+  servername: sg-ls-a4.nebulacloud.win
+  sni: sg-ls-a4.nebulacloud.win
+  skip-cert-verify: false
+- type: hysteria2
+  name: 🇰🇷_韩国_youtube@资源分享师_136
+  server: 3.38.219.233
+  port: 26001
+  password: FvaSDOypLvhaksIE
+  udp: true
+  servername: kor-ls-e-4.orwnaubrzcrbhrdgpdtu.org
+  sni: kor-ls-e-4.orwnaubrzcrbhrdgpdtu.org
+  skip-cert-verify: false
+- type: vmess
+  name: 🇯🇵_日本_youtube@资源分享师_137
+  server: gfnpy.linuxlh.xin
+  port: 16648
+  uuid: 45d18d43-639d-4719-802b-0fcd96782f30
+  cipher: auto
+  alterId: 0
+  udp: true
+  tls: false
+  servername: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  sni: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1355e5dfda50e2620ff5f8623c1af4ad.mobgslb.tbcache.com
+- type: hysteria2
+  name: 🇸🇬_新加坡_youtube@资源分享师_138
+  server: dnmgwfhy.dgswqnz9.dasdadenakgdagdakadawadsjk.com
+  port: 17209
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: dnmgwfhy.dgswqnz9.dasdadenakgdagdakadawadsjk.com
+  sni: dnmgwfhy.dgswqnz9.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: hysteria2
+  name: 🇸🇬_新加坡_youtube@资源分享师_139
+  server: dnmgwfhy.dgswqnz12.dasdadenakgdagdakadawadsjk.com
+  port: 17212
+  password: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  udp: true
+  servername: dnmgwfhy.dgswqnz12.dasdadenakgdagdakadawadsjk.com
+  sni: dnmgwfhy.dgswqnz12.dasdadenakgdagdakadawadsjk.com
+  skip-cert-verify: false
+- type: hysteria2
+  name: 🇰🇷_韩国_youtube@资源分享师_140
+  server: 3.38.217.93
+  port: 16001
+  password: f06VxyMMc2aU57PG
+  udp: true
+  servername: kor-ls-f-6.hogbvdxheortndkhdgws.uk
+  sni: kor-ls-f-6.hogbvdxheortndkhdgws.uk
+  skip-cert-verify: false
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_142
+  server: ddggsdafast.dronzed1.dasdadenakgdagdakadawadsjk.com
+  port: 18301
+  uuid: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzYh_L1wuKzmAKFUd77OaqKhvHl2UexMcuyb3rhE4EY
+    short-id: c6a59ae6
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_144
+  server: ddggsdafast.dronzed2.dasdadenakgdagdakadawadsjk.com
+  port: 18302
+  uuid: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzYh_L1wuKzmAKFUd77OaqKhvHl2UexMcuyb3rhE4EY
+    short-id: c6a59ae6
+- type: vless
+  name: 🇯🇵_日本_youtube@资源分享师_145
+  server: ddggsdafast.dronzed3.dasdadenakgdagdakadawadsjk.com
+  port: 18303
+  uuid: e7b69c7a-ca6c-4c34-bf31-be6d3e3e6b6f
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  sni: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzYh_L1wuKzmAKFUd77OaqKhvHl2UexMcuyb3rhE4EY
+    short-id: c6a59ae6
