@@ -259,6 +259,7 @@ function main(config) {
     "*.gh-proxy.com",
     "*.ghproxy.net",
     "*.ghproxy.vip"
+    ];
 
   return config;
 }
