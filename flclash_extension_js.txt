@@ -172,6 +172,32 @@ function main(config) {
   // 4. 优化规则：加入 Google 全系与 CDN 规则，确保更新下载不卡顿
   // ============================================================
   config.rules = [
+    // ---- 直连域名（优先于 Google / GEOSITE 规则）----
+    "DOMAIN-SUFFIX,gongwuyun.com,DIRECT",
+    "DOMAIN-SUFFIX,gongwuyun.cn,DIRECT",
+    "DOMAIN-SUFFIX,mohurd.gov.cn,DIRECT",
+    "DOMAIN-SUFFIX,zhelibuild.com,DIRECT",
+    "DOMAIN-SUFFIX,6vdy.com,DIRECT",
+    "DOMAIN-SUFFIX,hao6v.cc,DIRECT",
+    "DOMAIN-SUFFIX,66tutup.com,DIRECT",
+    "DOMAIN-SUFFIX,yinghezhinan.com,DIRECT",
+    "DOMAIN-SUFFIX,wdzyk.com,DIRECT",
+    "DOMAIN-SUFFIX,ganzhiyati.com,DIRECT",
+    "DOMAIN-SUFFIX,12xzzx.com,DIRECT",
+    "DOMAIN-SUFFIX,4fb.cn,DIRECT",
+    "DOMAIN-SUFFIX,page.gd,DIRECT",
+    "DOMAIN-SUFFIX,child9527.github.io,DIRECT",
+    "DOMAIN-SUFFIX,tampermonkey.net,DIRECT",
+    "DOMAIN-SUFFIX,gopeed.com,DIRECT",
+    "DOMAIN-SUFFIX,link3.cc,DIRECT",
+    "DOMAIN-SUFFIX,indevs.in,DIRECT",
+    "DOMAIN-SUFFIX,my9.ltd,DIRECT",
+    "DOMAIN-SUFFIX,cron-job.org,DIRECT",
+    "DOMAIN-SUFFIX,gh-proxy.org,DIRECT",
+    "DOMAIN-SUFFIX,gh-proxy.com,DIRECT",
+    "DOMAIN-SUFFIX,ghproxy.net,DIRECT",
+    "DOMAIN-SUFFIX,ghproxy.vip,DIRECT",
+
     // 强制 Google 全系及下载 CDN 走代理（防止因走国内直连或匹配错误导致转圈）
     "GEOSITE,google," + MAIN_GROUP,
     "DOMAIN-SUFFIX,gvt1.com," + MAIN_GROUP,
