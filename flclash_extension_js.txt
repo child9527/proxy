@@ -169,7 +169,33 @@ function main(config) {
   ];
 
   // ============================================================
-  // 4. 规则：直接引用 FlClash UI 规则集里的 my-ai 与 my-direct
+  // 4. 规则提供者：确保 my-direct / my-ai 存在
+  //    如果你已在 FlClash UI 里添加，这里不会覆盖已有定义
+  // ============================================================
+  config["rule-providers"] = config["rule-providers"] || {};
+
+  if (!config["rule-providers"]["my-direct"]) {
+    config["rule-providers"]["my-direct"] = {
+      type: "http",
+      behavior: "domain",
+      url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/proxy/main/clash_rules/my-direct.yaml",
+      path: "./ruleset/my-direct.yaml",
+      interval: 86400
+    };
+  }
+
+  if (!config["rule-providers"]["my-ai"]) {
+    config["rule-providers"]["my-ai"] = {
+      type: "http",
+      behavior: "domain",
+      url: "https://gh-proxy.com/https://raw.githubusercontent.com/child9527/proxy/main/clash_rules/my-ai.yaml",
+      path: "./ruleset/my-ai.yaml",
+      interval: 86400
+    };
+  }
+
+  // ============================================================
+  // 5. 规则：先引用规则集，再保留原 Google/CN/MATCH
   // ============================================================
   config.rules = [
     // 个人自定义规则集（放在最前面，优先匹配）
@@ -193,7 +219,7 @@ function main(config) {
   ];
 
   // ============================================================
-  // 5. DNS
+  // 6. DNS
   // ============================================================
   const CN_DNS = ["223.5.5.5", "119.29.29.29"];
   const DIRECT_DOMAINS = [
